@@ -9,14 +9,12 @@ class Error(Exception):
 def Choice():
     while True:
         try:
-                #yo pondria int(input()) y te ahorras todos los int(usuario)
             usuario = int(input("Ingrese 1 para Ciudadano o  2 para Admin: "))
             if usuario != 1 and usuario!=2:
                 raise Error()
             break
         except ValueError:
-                            # agregue 'alguno de los valores solicitados'
-            print("Ingrese alguno el valor solicitado")
+            print("Ingrese alguno de los valores solicitados")
         except:
             print("Ingrese uno de los valores especificados")
     if usuario == 1:
@@ -57,10 +55,17 @@ class Checker:
             return False
 
 
+class CiudadanoExisteMismoTelefonooNombre(Exception):
+    pass
+
+
+class CiudadanoExisteMismoCuil(Exception):
+    pass
+
+
 def CitizenLoop():
     while True:
         try:
-            # int(input())
             accion = int(input("Si esta registrado presione 1, si quiere registrarse presione 2: "))
             break
         except ValueError:
@@ -72,10 +77,13 @@ def CitizenLoop():
             try:
                 nombre = input("Ingrese su nombre: ")
                 telefono = int(input("Ingrese su numero de telefono: +54 9 "))
-                                                              #no entiendo esto
+                if verificarDatosNoExistentes(telefono = telefono) or verificar(nombre= nombre):
+                    raise CiudadanoExisteMismoTelefonooNombre()
                 if Checker.CheckTelefono(str(telefono)) == False:
                     raise ErrorTelefono()
                 cuil = int(input("Ingrese su Cuil: "))
+                if verificarDatosNoExistentes(cuil=cuil):
+                    raise CiudadanoExisteMismoCuil()
                 if Checker.CheckCuil(str(cuil)) == False:
                     raise ErrorCuil()
             except ValueError:
@@ -96,7 +104,15 @@ def verificar(nombre, telefono, cuil):
             return True
     Anses.close()
     return False
-
+def verificarDatosNoExistentes(nombre = "", telefono = 0, cuil = 0):
+    Anses = open("Anses.csv", "r")
+    reader = csv.reader(Anses, delimiter="|")
+    datos = [nombre, str(telefono), str(cuil)]
+    for fila in reader:
+        if fila[0] == datos[0] or fila[1] == datos[1] or fila[2] == datos[2]:
+            return True
+    Anses.close()
+    return False
 
 def registrarCiudadanoAnses(nombre, telefono, cuil):
     verificacion = verificar(nombre, telefono, cuil)
@@ -166,3 +182,4 @@ Choice()
 #español --> internas
 
 # valen --> hace un archivo con todas las funciones internas
+#chicos --> hagan excepciones de este archivo, en el archivo usuario linea 53 hay uno
