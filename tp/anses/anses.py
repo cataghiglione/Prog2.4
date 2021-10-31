@@ -7,3 +7,4 @@ class Anses:
             if numero in self.telefonos:
                 return True
 
+coni = 'a'
