@@ -173,7 +173,7 @@ def AdminChoices(admin):
 Choice()
 
 
-#Como hacer para que no existan dos personas con el mismo cuil, mismo telefono, mismo nombre
+#Como hacer para que no existan dos personas con el mismo cuil, mismo telefono, mismo nombre --> LISTO
 # Ciudadano choices y admin choices
     # guarda con los loops y los breaks
 
