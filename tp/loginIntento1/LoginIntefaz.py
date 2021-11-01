@@ -1,5 +1,8 @@
 import csv
+from tp.usuarios.usuario import Administrador
 
+#Instancie administrador debido a que se trata siempre del mismo
+admin = Administrador()
 
 #cambiar nombre
 class Error(Exception):
@@ -168,8 +171,12 @@ def AdminLoop():
 
 
 def AdminChoices(admin):
-    pass
-
+    while True:
+        try:
+            accion = int(input("Si esta registrado presione 1, si quiere registrarse presione 2: "))
+            break
+        except ValueError:
+            print("Ingrese el numero solicitado")
 Choice()
 
 
@@ -182,4 +189,5 @@ Choice()
 #español --> internas
 
 # valen --> hace un archivo con todas las funciones internas
-#chicos --> hagan excepciones de este archivo, en el archivo usuario linea 53 hay uno
+
+
