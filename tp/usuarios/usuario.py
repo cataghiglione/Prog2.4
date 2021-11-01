@@ -3,10 +3,10 @@ class Administrador:
         self.ciudadanos = []
         self.eventos = []
     def bloquear(self, usuario):
-        pass
+        usuario.bloqueado = True
 
     def desbloquear(self, usuario):
-        pass
+        usuario.bloqueado = False
 
     def darAlta(self, evento):
         pass
