@@ -15,7 +15,8 @@ class Mapa:
         self.imagen = PhotoImage(file="coni.png")
         self.label = Label(self.frame, image=self.imagen)
         self.label.pack()
-
+        self.master.geometry(f'{self.imagen.width()}x{self.imagen.height()}')
+        self.master.resizable(0,0)
 
 
 
@@ -23,13 +24,21 @@ class Mapa:
         boton= MiBoton(self.frame, evento)
         boton.place(x=str(evento.getX()), y=str(evento.getY()))
         boton.config(width="12", height="1")
-        self.__eventos.append(evento)
+        Mapa.__eventos.append(evento)
         self.__botones.append(boton)
 
+    def ReiniciarBotones(self):
+        for evento in Mapa.__eventos:
+            self.__botones = []
+            boton = MiBoton(self.frame, evento)
+            boton.place(x=str(evento.getX()), y=str(evento.getY()))
+            boton.config(width="12", height="1")
+            self.__botones.append(boton)
+
     def BorrarBoton(self, evento):
-        newListEvent = self.__eventos
+        newListEvent = Mapa.__eventos
         newListBoton = self.__botones
-        for i in self.__eventos:
+        for i in Mapa.__eventos:
             if i == evento:
                 newListEvent.remove(i)
                 for boton in self.__botones:
@@ -37,13 +46,13 @@ class Mapa:
                         boton.destroy()
                         newListBoton.remove(boton)
         self.__botones = newListBoton
-        self.__eventos = newListEvent
+        Mapa.__eventos = newListEvent
 
     def VerMapa(self):
         self.master.mainloop()
 
     def getEventos(self):
-        return self.__eventos
+        return Mapa.__eventos
 
     def getBotones(self):
         return self.__botones
@@ -54,7 +63,7 @@ class MiBoton(Button):
         self.__evento = evento
 
     def __repr__(self):
-        return f"Soy "
+        return f"Soy el boton de {self.__evento.getName()}"
 
     def showinfoB(self):
         msg1 = self.__evento.getType()
@@ -92,12 +101,6 @@ tuevento = Evento(400,200, "San Isidro", "Medicina")
 a.AgregarBoton(mievento)
 a.AgregarBoton(tuevento)
 a.BorrarBoton(mievento)
-root.geometry(f'{a.imagen.width()}x{a.imagen.height()}')
-root.resizable(0,0)
+a.ReiniciarBotones()
+
 a.VerMapa()
-
-
-#print(a.getEventos())
-#print(a.getBotones())
-
-
