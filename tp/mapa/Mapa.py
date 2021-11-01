@@ -4,11 +4,10 @@ from tkinter import messagebox
 class Mapa:
     __eventos = []
     __botones = []
+    master = Tk()
+    def __init__(self):
 
-    def __init__(self, master):
-        self.master = master
-
-        self.frame = Frame(master)
+        self.frame = Frame(Mapa.master)
         self.frame.config(bg="grey")
         self.frame.pack()
 
@@ -24,16 +23,14 @@ class Mapa:
         boton= MiBoton(self.frame, evento)
         boton.place(x=str(evento.getX()), y=str(evento.getY()))
         boton.config(width="12", height="1")
-        Mapa.__eventos.append(evento)
+        if evento not in Mapa.__eventos:
+            Mapa.__eventos.append(evento)
         self.__botones.append(boton)
 
     def ReiniciarBotones(self):
         for evento in Mapa.__eventos:
             self.__botones = []
-            boton = MiBoton(self.frame, evento)
-            boton.place(x=str(evento.getX()), y=str(evento.getY()))
-            boton.config(width="12", height="1")
-            self.__botones.append(boton)
+            self.AgregarBoton(evento)
 
     def BorrarBoton(self, evento):
         newListEvent = Mapa.__eventos
@@ -94,8 +91,7 @@ class Evento:
         return self.__y
 
 
-root = Tk()
-a= Mapa(root)
+a= Mapa()
 mievento = Evento(200, 100, "Palermo", "Seguridad")
 tuevento = Evento(400,200, "San Isidro", "Medicina")
 a.AgregarBoton(mievento)
