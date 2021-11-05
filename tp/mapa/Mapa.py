@@ -100,3 +100,9 @@ a.BorrarBoton(mievento)
 a.ReiniciarBotones()
 
 a.VerMapa()
+
+# b = Mapa()
+# b.ReiniciarBotones()
+# b.AgregarBoton(Evento(50,30, 'Pilar', 'Educación'))
+# print(b.getEventos())
+# b.VerMapa()
