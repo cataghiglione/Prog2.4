@@ -1,29 +1,32 @@
 import csv
-from usuarios.usuario import Administrador
+from EventIt.usuarios.usuario import Administrador
 
 #Instancie administrador debido a que se trata siempre del mismo
 admin = Administrador()
 
 #cambiar nombre
 class Error(Exception):
-    msg = "None pa ;)"
+    msg1 = "Coloque uno de los valores solicitados"
 
-
+miErro = Error()
 def Choice():
     while True:
         try:
-            usuario = int(input("Ingrese 1 para Ciudadano o 2 para Admin: "))
-            if usuario != 1 and usuario!=2:
+            usuario = int(input("|grese 1 para Ciudadano\n|2 para Admin \n|3 para ver el Mapa \n|4 para ver el tablero: "))
+            if usuario != 1 and usuario != 2 and usuario != 3:
                 raise Error()
             break
         except ValueError:
-            print("Ingrese alguno de los valores solicitados")
+            print("Coloque uno de los valores solicitados ;)")
         except:
-            print("Ingrese uno de los valores especificados")
+            print("Coloque uno de los valores solicitados")
+
     if usuario == 1:
         CitizenLoop()
     elif usuario == 2:
         AdminLoop()
+    elif usuario == 3:
+        MapLoop()
     else:
         print("Hay un error obteniendo usuario ;)")
 
@@ -31,10 +34,11 @@ def Choice():
 class ErrorCuil(Exception):
     pass
 
+
 class ErrorTelefono(Exception):
     pass
 
-class Checker():
+class Checker:
     @classmethod
     def CheckCuil(self, cuil):
         if len(cuil) == 11:
@@ -42,7 +46,13 @@ class Checker():
         else:
             print("raro")
             return False
-
+    @classmethod
+    def CheckDni(self, dni):
+        """Si es un dni retorna True"""
+        if len(dni) == 8:
+            return True
+        else:
+            return False
     @classmethod
     def CheckTelefono(self, telefono):
         if len(telefono) == 10:
@@ -51,17 +61,42 @@ class Checker():
             return False
 
 
-class CiudadanoExisteMismoTelefono(Exception):
+class CiudadanoExisteMismoTelefonooNombre(Exception):
     pass
 
 
 class CiudadanoExisteMismoCuil(Exception):
     pass
 
+from EventIt.Estadistica.Estadistica1 import Tablero
+def StatisticsLoop():
+    while True:
+        try:
+            accion = int(input("|Ingrese 1 para ver el tablero \n|2 para "))
+            if accion != 1 and accion != 2:
+                raise Error()
 
-class CiudadanoExisteMismoNombre(Exception):
-    pass
 
+
+from EventIt.mapa1.Mapa import Mapa
+
+def MapLoop():
+    while True:
+        try:
+            accion = int(input("Ingrese 1 para abrir el mapa o 2 para volver a Login: "))
+            if accion != 1 and accion !=2:
+                raise Error()
+            break
+        except ValueError:
+            print("Ingrese uno de los valores solicitados")
+        except Error:
+            print("Los valores no son correctos")
+    if int(accion) == 1:
+        mi = Mapa()
+        mi.VerMapa()
+    elif int(accion) == 2:
+        Choice()
+    Choice()
 
 def CitizenLoop():
     while True:
@@ -76,11 +111,9 @@ def CitizenLoop():
         while True:
             try:
                 nombre = input("Ingrese su nombre: ")
-                if verificarDatosNoExistentes(nombre=nombre.title()):
-                    raise CiudadanoExisteMismoNombre()
                 telefono = int(input("Ingrese su numero de telefono: +54 9 "))
-                if verificarDatosNoExistentes(telefono=telefono):
-                    raise CiudadanoExisteMismoTelefono()
+                if verificarDatosNoExistentes(telefono = telefono) or verificar(nombre= nombre):
+                    raise CiudadanoExisteMismoTelefonooNombre()
                 if Checker.CheckTelefono(str(telefono)) == False:
                     raise ErrorTelefono()
                 cuil = int(input("Ingrese su Cuil: "))
@@ -90,16 +123,8 @@ def CitizenLoop():
                     raise ErrorCuil()
             except ValueError:
                 print("Coloque solo numeros enteros para el telefono y el cuil")
-            except ErrorCuil:
-                print("Un Cuil posee 11 digitos ;)")
-            except ErrorTelefono:
-                print("Un Telefono posee 10 digitos ;)")
-            except CiudadanoExisteMismoTelefono:
-                print("Este telefono ya existe")
-            except CiudadanoExisteMismoCuil:
-                print("Este Cuil ya existe")
-            except CiudadanoExisteMismoNombre:
-                print("Este nombre ya existe")
+            except Exception:
+                print("Un Cuil posee 11 digitos y un telefono 8 digitos ;)")
             else:
                 registrarCiudadanoAnses(nombre.title(), int(telefono), int(cuil))
                 CitizenLoop()
@@ -119,11 +144,7 @@ def verificarDatosNoExistentes(nombre = "", telefono = 0, cuil = 0):
     reader = csv.reader(Anses, delimiter="|")
     datos = [nombre, str(telefono), str(cuil)]
     for fila in reader:
-        if fila[0] == datos[0]:
-            return True
-        elif fila[1] == datos[1]:
-            return True
-        elif fila[2] == datos[2]:
+        if fila[0] == datos[0] or fila[1] == datos[1] or fila[2] == datos[2]:
             return True
     Anses.close()
     return False
@@ -200,4 +221,5 @@ Choice()
 #español --> internas
 
 # valen --> hace un archivo con todas las funciones internas
+
 

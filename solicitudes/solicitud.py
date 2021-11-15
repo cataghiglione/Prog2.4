@@ -1,8 +1,5 @@
-
+from EventIt.anses.efimeros import efimero
 class Solicitud:
-    def __init__(self, contacto):
-        self.contacto = contacto
-
-    def __repr__(self):
-        nombre = self.contacto.nombre
-        return f"{nombre}"
+    def __init__(self, emisor, receptor):
+        self.emisor = emisor
+        self.receptor = receptor
