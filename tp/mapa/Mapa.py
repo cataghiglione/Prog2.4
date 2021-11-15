@@ -98,7 +98,8 @@ a.AgregarBoton(mievento)
 a.AgregarBoton(tuevento)
 a.BorrarBoton(mievento)
 a.ReiniciarBotones()
-
+suevento = Evento(700,500,"Pilar","Estudio")
+a.AgregarBoton(suevento)
 a.VerMapa()
 
 # b = Mapa()

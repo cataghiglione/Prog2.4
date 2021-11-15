@@ -1,5 +1,5 @@
 import csv
-from tp.usuarios.usuario import Administrador
+from usuarios.usuario import Administrador
 
 #Instancie administrador debido a que se trata siempre del mismo
 admin = Administrador()
@@ -12,7 +12,7 @@ class Error(Exception):
 def Choice():
     while True:
         try:
-            usuario = int(input("Ingrese 1 para Ciudadano o  2 para Admin: "))
+            usuario = int(input("Ingrese 1 para Ciudadano o 2 para Admin: "))
             if usuario != 1 and usuario!=2:
                 raise Error()
             break
@@ -31,11 +31,10 @@ def Choice():
 class ErrorCuil(Exception):
     pass
 
-
 class ErrorTelefono(Exception):
     pass
 
-class Checker:
+class Checker():
     @classmethod
     def CheckCuil(self, cuil):
         if len(cuil) == 11:
@@ -43,13 +42,7 @@ class Checker:
         else:
             print("raro")
             return False
-    @classmethod
-    def CheckDni(self, dni):
-        """Si es un dni retorna True"""
-        if len(dni) == 8:
-            return True
-        else:
-            return False
+
     @classmethod
     def CheckTelefono(self, telefono):
         if len(telefono) == 10:
@@ -58,11 +51,15 @@ class Checker:
             return False
 
 
-class CiudadanoExisteMismoTelefonooNombre(Exception):
+class CiudadanoExisteMismoTelefono(Exception):
     pass
 
 
 class CiudadanoExisteMismoCuil(Exception):
+    pass
+
+
+class CiudadanoExisteMismoNombre(Exception):
     pass
 
 
@@ -79,9 +76,11 @@ def CitizenLoop():
         while True:
             try:
                 nombre = input("Ingrese su nombre: ")
+                if verificarDatosNoExistentes(nombre=nombre.title()):
+                    raise CiudadanoExisteMismoNombre()
                 telefono = int(input("Ingrese su numero de telefono: +54 9 "))
-                if verificarDatosNoExistentes(telefono = telefono) or verificar(nombre= nombre):
-                    raise CiudadanoExisteMismoTelefonooNombre()
+                if verificarDatosNoExistentes(telefono=telefono):
+                    raise CiudadanoExisteMismoTelefono()
                 if Checker.CheckTelefono(str(telefono)) == False:
                     raise ErrorTelefono()
                 cuil = int(input("Ingrese su Cuil: "))
@@ -91,8 +90,16 @@ def CitizenLoop():
                     raise ErrorCuil()
             except ValueError:
                 print("Coloque solo numeros enteros para el telefono y el cuil")
-            except Exception:
-                print("Un Cuil posee 11 digitos y un telefono 8 digitos ;)")
+            except ErrorCuil:
+                print("Un Cuil posee 11 digitos ;)")
+            except ErrorTelefono:
+                print("Un Telefono posee 10 digitos ;)")
+            except CiudadanoExisteMismoTelefono:
+                print("Este telefono ya existe")
+            except CiudadanoExisteMismoCuil:
+                print("Este Cuil ya existe")
+            except CiudadanoExisteMismoNombre:
+                print("Este nombre ya existe")
             else:
                 registrarCiudadanoAnses(nombre.title(), int(telefono), int(cuil))
                 CitizenLoop()
@@ -112,7 +119,11 @@ def verificarDatosNoExistentes(nombre = "", telefono = 0, cuil = 0):
     reader = csv.reader(Anses, delimiter="|")
     datos = [nombre, str(telefono), str(cuil)]
     for fila in reader:
-        if fila[0] == datos[0] or fila[1] == datos[1] or fila[2] == datos[2]:
+        if fila[0] == datos[0]:
+            return True
+        elif fila[1] == datos[1]:
+            return True
+        elif fila[2] == datos[2]:
             return True
     Anses.close()
     return False
