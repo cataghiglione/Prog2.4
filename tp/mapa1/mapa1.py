@@ -1,9 +1,10 @@
 from tkinter import Tk
 
-from tp.mapa1.Mapa import Mapa, Evento
-print(Mapa.master)
+from tp.mapa1.Mapa import Mapa, Evento, a
+
+
 b = Mapa()
-b.ReiniciarBotones()
 b.AgregarBoton(Evento(50,30, 'Pilar', 'Educación'))
 print(b.getEventos())
+b.ReiniciarBotones()
 b.VerMapa()
