@@ -183,7 +183,7 @@ Choice()
 #Como hacer para que no existan dos personas con el mismo cuil, mismo telefono, mismo nombre --> LISTO
 # Ciudadano choices y admin choices
     # guarda con los loops y los breaks
-
+#holz
 #PREGUNTA: Como hacer con los errorCuil y errorTelefono
 #ingles --> interfaz
 #español --> internas
