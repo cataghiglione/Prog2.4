@@ -1,5 +1,5 @@
 from tp.usuarios.usuario import Administrador
-from parciales.final2020feb.unnitest import Lista
+
 class efimero:
     @classmethod
     def TelefonoACuil(cls, telefono):

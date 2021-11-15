@@ -56,7 +56,13 @@ class Mapa:
 
 class MiBoton(Button):
     def __init__(self,raiz, evento):
-        super().__init__(master=raiz, command= self.showinfoB, text=evento.getName())
+        if evento.getCantidad() >= 100:
+            color = "red"
+        elif evento.getCantidad() >= 50:
+            color = "yellow"
+        else:
+            color = "green"
+        super().__init__(master=raiz, command= self.showinfoB, text=evento.getName(), bg= color)
         self.__evento = evento
 
     def __repr__(self):
@@ -64,7 +70,7 @@ class MiBoton(Button):
 
     def showinfoB(self):
         msg1 = self.__evento.getType()
-        messagebox.showinfo(message=f"evento de {msg1}")
+        messagebox.showinfo(message=f"Evento de {msg1}. \nHay {self.__evento.getCantidad()} personas ")
 
     def getEvento(self):
         return self.__evento
@@ -72,11 +78,12 @@ class MiBoton(Button):
 
 class Evento:
 
-    def __init__(self,x,y, name, type):
+    def __init__(self,x,y, name, type, cantidadPersonas):
         self.__type = type
         self.__x = x
         self.__y = y
         self.__name = name
+        self.__cantidadPersonas = cantidadPersonas
 
     def __repr__(self):
         return f"soy {self.__name}"
@@ -89,19 +96,6 @@ class Evento:
         return self.__x
     def getY(self):
         return self.__y
+    def getCantidad(self):
+        return self.__cantidadPersonas
 
-
-a= Mapa()
-mievento = Evento(200, 100, "Palermo", "Seguridad")
-tuevento = Evento(400,200, "San Isidro", "Medicina")
-a.AgregarBoton(mievento)
-a.AgregarBoton(tuevento)
-a.BorrarBoton(mievento)
-a.ReiniciarBotones()
-# a.AgregarBoton(Evento(50,30, 'Pilar', 'Educación'))
-# a.VerMapa()
-# b = Mapa()
-# b.ReiniciarBotones()
-# b.AgregarBoton(Evento(50,30, 'Pilar', 'Educación'))
-# print(b.getEventos())
-# b.VerMapa()

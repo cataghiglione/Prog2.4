@@ -6,24 +6,27 @@ admin = Administrador()
 
 #cambiar nombre
 class Error(Exception):
-    msg = "None pa ;)"
+    msg1 = "Coloque uno de los valores solicitados"
 
-
+miErro = Error()
 def Choice():
     while True:
         try:
-            usuario = int(input("Ingrese 1 para Ciudadano o  2 para Admin: "))
-            if usuario != 1 and usuario!=2:
+            usuario = int(input("Ingrese 1 para Ciudadano, 2 para Admin o 3 para ver el Mapa: "))
+            if usuario != 1 and usuario != 2 and usuario != 3:
                 raise Error()
             break
         except ValueError:
-            print("Ingrese alguno de los valores solicitados")
+            print("Coloque uno de los valores solicitados ;)")
         except:
-            print("Ingrese uno de los valores especificados")
+            print("Coloque uno de los valores solicitados")
+
     if usuario == 1:
         CitizenLoop()
     elif usuario == 2:
         AdminLoop()
+    elif usuario == 3:
+        MapLoop()
     else:
         print("Hay un error obteniendo usuario ;)")
 
@@ -65,6 +68,28 @@ class CiudadanoExisteMismoTelefonooNombre(Exception):
 class CiudadanoExisteMismoCuil(Exception):
     pass
 
+class MapChoices:
+    pass
+
+from tp.mapa1.Mapa import Mapa
+
+def MapLoop():
+    while True:
+        try:
+            accion = int(input("Ingrese 1 para abrir el mapa o 2 para volver a Login: "))
+            if accion != 1 and accion !=2:
+                raise Error()
+            break
+        except ValueError:
+            print("Ingrese uno de los valores solicitados")
+        except Error:
+            print("Los valores no son correctos")
+    if int(accion) == 1:
+        mi = Mapa()
+        mi.VerMapa()
+    elif int(accion) == 2:
+        Choice()
+    Choice()
 
 def CitizenLoop():
     while True:
