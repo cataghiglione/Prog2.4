@@ -1,4 +1,4 @@
-from tp.anses.efimeros import efimero
+from anses.efimeros import efimero
 class Solicitud:
     def __init__(self, emisor, receptor):
         self.emisor = emisor
