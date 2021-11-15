@@ -28,10 +28,10 @@ class Administrador:
 
 
 
-from tp.solicitudes.solicitud import Solicitud
-from tp.solicitudes.contacto import Contacto
+from solicitudes.solicitud import Solicitud
+from solicitudes.contacto import Contacto
 
-from tp.anses.efimeros import efimero
+from anses.efimeros import efimero
 class Ciudadano:
     def __init__(self, telefono, cuil):
         self.telefono = telefono
