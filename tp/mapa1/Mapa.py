@@ -4,11 +4,10 @@ from tkinter import messagebox
 class Mapa:
     __eventos = []
     __botones = []
+    master = Tk()
+    def __init__(self):
 
-    def __init__(self, master):
-        self.master = master
-
-        self.frame = Frame(master)
+        self.frame = Frame(Mapa.master)
         self.frame.config(bg="grey")
         self.frame.pack()
 
@@ -24,38 +23,36 @@ class Mapa:
         boton= MiBoton(self.frame, evento)
         boton.place(x=str(evento.getX()), y=str(evento.getY()))
         boton.config(width="12", height="1")
-        Mapa.__eventos.append(evento)
-        self.__botones.append(boton)
+        if evento not in Mapa.__eventos:
+            Mapa.__eventos.append(evento)
+        Mapa.__botones.append(boton)
 
     def ReiniciarBotones(self):
         for evento in Mapa.__eventos:
-            self.__botones = []
-            boton = MiBoton(self.frame, evento)
-            boton.place(x=str(evento.getX()), y=str(evento.getY()))
-            boton.config(width="12", height="1")
-            self.__botones.append(boton)
+            Mapa.__botones = []
+            self.AgregarBoton(evento)
 
     def BorrarBoton(self, evento):
         newListEvent = Mapa.__eventos
-        newListBoton = self.__botones
+        newListBoton = Mapa.__botones
         for i in Mapa.__eventos:
             if i == evento:
                 newListEvent.remove(i)
-                for boton in self.__botones:
+                for boton in Mapa.__botones:
                     if boton.getEvento() == evento:
                         boton.destroy()
                         newListBoton.remove(boton)
-        self.__botones = newListBoton
+        Mapa.__botones = newListBoton
         Mapa.__eventos = newListEvent
 
     def VerMapa(self):
-        self.master.mainloop()
+        Mapa.master.mainloop()
 
     def getEventos(self):
         return Mapa.__eventos
 
     def getBotones(self):
-        return self.__botones
+        return Mapa.__botones
 
 class MiBoton(Button):
     def __init__(self,raiz, evento):
@@ -94,17 +91,17 @@ class Evento:
         return self.__y
 
 
-root = Tk()
-a= Mapa(root)
+a= Mapa()
 mievento = Evento(200, 100, "Palermo", "Seguridad")
 tuevento = Evento(400,200, "San Isidro", "Medicina")
 a.AgregarBoton(mievento)
 a.AgregarBoton(tuevento)
 a.BorrarBoton(mievento)
 a.ReiniciarBotones()
-
-a.VerMapa()
-
-
-
-
+# a.AgregarBoton(Evento(50,30, 'Pilar', 'Educación'))
+# a.VerMapa()
+# b = Mapa()
+# b.ReiniciarBotones()
+# b.AgregarBoton(Evento(50,30, 'Pilar', 'Educación'))
+# print(b.getEventos())
+# b.VerMapa()
