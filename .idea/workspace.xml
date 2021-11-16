@@ -37,8 +37,8 @@
       <recent name="$PROJECT_DIR$/EventIt" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for unit.MyTestCase.test_something">
-    <configuration name="Python tests for unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for EventIt.unittesting.unit.MyTestCase.test_something">
+    <configuration name="Python tests for EventIt.unittesting.unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Prog2.4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -48,7 +48,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unit.MyTestCase.test_something&quot;" />
+      <option name="_new_target" value="&quot;EventIt.unittesting.unit.MyTestCase.test_something&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -62,13 +62,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/unittesting/unit.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/EventIt/unittesting/unit.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for unit.MyTestCase.test_something" />
+        <item itemvalue="Python tests.Python tests for EventIt.unittesting.unit.MyTestCase.test_something" />
         <item itemvalue="Python tests.Python tests in unit.py" />
       </list>
     </recent_temporary>
