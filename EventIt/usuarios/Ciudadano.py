@@ -1,4 +1,5 @@
 from EventIt.anses.Exceptions1 import DatosIncorrectos
+from anses.efimeros import Efimero
 
 
 class Ciudadano:
