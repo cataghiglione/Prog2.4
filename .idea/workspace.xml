@@ -33,6 +33,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/EventIt/loginIntento1" />
+      <recent name="$PROJECT_DIR$/EventIt/unittesting" />
       <recent name="$PROJECT_DIR$/EventIt/mapa1" />
       <recent name="$PROJECT_DIR$/EventIt" />
     </key>
@@ -100,12 +102,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/unittesting/unit.py</url>
+          <url>file://$PROJECT_DIR$/EventIt/unittesting/unit.py</url>
           <line>5</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/unittesting/unit.py</url>
+          <url>file://$PROJECT_DIR$/EventIt/unittesting/unit.py</url>
           <line>2</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
