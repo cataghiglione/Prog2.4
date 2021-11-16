@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99cd3dbd-3649-4726-982e-5fb4a15d49fc" name="Changes" comment="" />
+    <list default="true" id="99cd3dbd-3649-4726-982e-5fb4a15d49fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventIt/loginIntento1/efimeros.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/loginIntento1/efimeros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventIt/solicitudes/contacto.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/solicitudes/contacto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventIt/solicitudes/solicitud.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/solicitudes/solicitud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventIt/usuarios/Ciudadano.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/usuarios/Ciudadano.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +46,7 @@
       <recent name="$PROJECT_DIR$/EventIt" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for EventIt.unittesting.unit.MyTestCase.test_something">
+  <component name="RunManager" selected="Python tests.Python tests for tests.ProbarEnviarSolicitud.test1">
     <configuration name="Python tests for EventIt.unittesting.unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Prog2.4" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -52,6 +58,34 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;EventIt.unittesting.unit.MyTestCase.test_something&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.ProbarEnviarSolicitud.test1" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Prog2.4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EventIt/unittesting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.ProbarEnviarSolicitud.test1&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.ProbarTelefonoACuil.test1" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Prog2.4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EventIt/unittesting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.ProbarTelefonoACuil.test1&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -71,6 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for tests.ProbarEnviarSolicitud.test1" />
+        <item itemvalue="Python tests.Python tests for tests.ProbarTelefonoACuil.test1" />
         <item itemvalue="Python tests.Python tests for EventIt.unittesting.unit.MyTestCase.test_something" />
         <item itemvalue="Python tests.Python tests in unit.py" />
       </list>
@@ -112,7 +148,29 @@
           <line>2</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/EventIt/unittesting/tests.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/EventIt/unittesting/tests.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/EventIt/unittesting/tests.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>
