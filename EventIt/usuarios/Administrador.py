@@ -16,3 +16,4 @@ class Administrador:
 
     def auditar(self, usuarios):
         pass
+
