@@ -36,8 +36,17 @@
       <recent name="C:\Users\Coni\OneDrive\Documentos\GitHub\Prog2.4\EventIt\loginIntento1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for unit.MyTestCase.test_something">
-    <configuration name="Python tests for unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/EventIt/loginIntento1" />
+      <recent name="$PROJECT_DIR$/EventIt/unittesting" />
+      <recent name="$PROJECT_DIR$/EventIt/mapa1" />
+      <recent name="$PROJECT_DIR$/EventIt" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for EventIt.unittesting.unit.MyTestCase.test_something">
+    <configuration name="Python tests for EventIt.unittesting.unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Prog2.4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -47,7 +56,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unit.MyTestCase.test_something&quot;" />
+      <option name="_new_target" value="&quot;EventIt.unittesting.unit.MyTestCase.test_something&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -61,13 +70,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/unittesting/unit.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/EventIt/unittesting/unit.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for unit.MyTestCase.test_something" />
+        <item itemvalue="Python tests.Python tests for EventIt.unittesting.unit.MyTestCase.test_something" />
         <item itemvalue="Python tests.Python tests in unit.py" />
       </list>
     </recent_temporary>
@@ -99,12 +108,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/unittesting/unit.py</url>
+          <url>file://$PROJECT_DIR$/EventIt/unittesting/unit.py</url>
           <line>5</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/unittesting/unit.py</url>
+          <url>file://$PROJECT_DIR$/EventIt/unittesting/unit.py</url>
           <line>2</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
