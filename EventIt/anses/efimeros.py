@@ -8,6 +8,17 @@ from EventIt.usuarios.Ciudadano import Ciudadano
 from EventIt.usuarios.Administrador import Administrador
 class Efimero:
     @classmethod
+    def CuilANombre(cls, telefono):
+        """Dado un Telefono obtengo un Cuil"""
+        Anses = open("C:\Prog2.4-master\EventIt\loginIntento1\Anses.csv", "r")
+        reader = csv.reader(Anses, delimiter="|")
+        for fila in reader:
+            if fila[1] == str(telefono):
+                cuil = fila[2]
+                return cuil
+        raise NoExiste("No se encontro el telefono solicitado")
+
+    @classmethod
     def TelefonoACuil(cls, telefono):
          """Dado un Telefono obtengo un Cuil"""
          Anses = open("C:\Prog2.4-master\EventIt\loginIntento1\Anses.csv", "r")
