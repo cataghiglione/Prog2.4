@@ -211,10 +211,14 @@ class Function:
             except Exception:
                 return Error.ErrorMsg("Ingrese su Cuil de 11 digitos")
         print("Se ha iniciado sesion")
-        # Instanciar Ciudadano??!
+        ciudadano = Ciudadano(,dato, int(Efimero.CuilATelefono()))
 
     def CitizenChoices(self, ciudadano):
-        pass
+        while True:
+            try:
+
+
+
 
     def AdminLoop(self):
         counter = 0
