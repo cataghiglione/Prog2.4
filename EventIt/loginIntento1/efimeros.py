@@ -6,6 +6,8 @@ from EventIt.solicitudes.contacto import Contacto
 from EventIt.solicitudes.solicitud import Solicitud
 from EventIt.usuarios.Ciudadano import Ciudadano
 from EventIt.usuarios.Administrador import Administrador
+
+
 class Efimero:
     @classmethod
     def CuilANombre(cls, telefono):
