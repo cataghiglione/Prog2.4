@@ -27,9 +27,15 @@ class Efimero:
         reader = csv.reader(Anses, delimiter="|")
         for fila in reader:
             if fila[1] == str(telefono):
+<<<<<<< HEAD
                 cuil = int(fila[2])
                 return cuil
         raise NoExiste("No se encontro el telefono solicitado")
+=======
+                nombre = fila[0]
+                return nombre
+        raise NoExiste("No se encontro el cuil solicitado")
+>>>>>>> b5b4825df760182aaf048caf913705c0499dccee
 
     @classmethod
     def TelefonoACuil(cls, telefono):
@@ -87,8 +93,8 @@ class Efimero:
             raise DatosIncorrectos("Un cuil tiene 11 numeros, y un telefono 10, por favor verifique los datos ingresados")
 
     def rechazar(self,solicitud):
-        contacto =solicitud.contacto
-        ciudadano =CrearCiudadano.crear_ciudadano(contacto.cuil, contacto.numero)
+        contacto = solicitud.contacto
+        ciudadano = CrearCiudadano.crear_ciudadano(contacto.cuil, contacto.numero)
         ciudadano.intentos += 1
         if ciudadano.intentos == 5:
             ciudadano.bloqueado = True
