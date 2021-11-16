@@ -4,7 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99cd3dbd-3649-4726-982e-5fb4a15d49fc" name="Changes" comment="" />
+    <list default="true" id="99cd3dbd-3649-4726-982e-5fb4a15d49fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Estadistica/Estadistica1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/AdministracionSensores.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/Reporte.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/Sensor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/CrearCiudadano.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/Exceptions1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/anses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/efimeros.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/Anses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/LoginIntefaz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/coni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/metodos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/Evento.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/Mapa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/coni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/solicitudes/contacto.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/solicitudes/solicitud.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/Estadistica/Estadistica1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/anses/anses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/anses/efimeros.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/Anses.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/LoginIntefaz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/coni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa/Mapa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa/coni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/Mapa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/coni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/mapa1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/solicitudes/contacto.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/solicitudes/solicitud.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +46,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
@@ -30,6 +63,42 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager" selected="Python tests.Python tests for unit.MyTestCase.test_something">
+    <configuration name="Python tests for unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Prog2.4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittesting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;unit.MyTestCase.test_something&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in unit.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Prog2.4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittesting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/unittesting/unit.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for unit.MyTestCase.test_something" />
+        <item itemvalue="Python tests.Python tests in unit.py" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,5 +109,32 @@
       <updated>1636982706723</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/unittesting/unit.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/unittesting/unit.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
