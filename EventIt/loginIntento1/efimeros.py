@@ -1,11 +1,22 @@
 from EventIt.anses.Exceptions1 import NoExiste, DatosIncorrectos
-from EventIt.anses.CrearCiudadano import CrearCiudadano
 from EventIt.loginIntento1.metodos import Metodo
-import csv
 from EventIt.solicitudes.contacto import Contacto
 from EventIt.solicitudes.solicitud import Solicitud
-from EventIt.usuarios.Ciudadano import Ciudadano
 from EventIt.usuarios.Administrador import Administrador
+from EventIt.usuarios.Ciudadano import Ciudadano
+import csv
+
+
+class CrearCiudadano:
+    @classmethod
+    def crear_ciudadano(cls, cuil, telefono):
+        Anses = open("Anses.csv", "r")
+        reader = csv.reader(Anses, delimiter="|")
+        for fila in reader:
+            if fila[1] == telefono and fila [2] == cuil:
+                nombre = fila[0]
+                return Ciudadano(nombre, telefono, cuil)
+        Anses.close()
 
 
 class Efimero:
@@ -16,7 +27,7 @@ class Efimero:
         reader = csv.reader(Anses, delimiter="|")
         for fila in reader:
             if fila[1] == str(telefono):
-                cuil = fila[2]
+                cuil = int(fila[2])
                 return cuil
         raise NoExiste("No se encontro el telefono solicitado")
 
@@ -27,7 +38,7 @@ class Efimero:
          reader = csv.reader(Anses, delimiter="|")
          for fila in reader:
              if fila [1] == str(telefono):
-                 cuil = fila [2]
+                 cuil = int(fila [2])
                  return cuil
          raise NoExiste("No se encontro el telefono solicitado")
 
@@ -36,8 +47,8 @@ class Efimero:
         Anses = open("Anses.csv", "r")
         reader = csv.reader(Anses, delimiter="|")
         for fila in reader:
-            if fila[2] == cuil:
-                telefono = fila[1]
+            if fila[2] == str(cuil):
+                telefono = int(fila[1])
                 return telefono
         raise NoExiste("No se encontro el cuil solicitado")
 
@@ -46,7 +57,7 @@ class Efimero:
         if len(str(info)) == 10:
             celular_r = info
             try:
-                cuil_r = Metodo.TelefonoACuil(celular_r)
+                cuil_r = Efimero.TelefonoACuil(celular_r)
             except NoExiste:
                 return "Ese telefono no esta registrado, por favor verifique los datos"
             except Exception:
@@ -61,13 +72,13 @@ class Efimero:
         elif len(str(info)) == 11:
             cuil_r = info
             try:
-                celular_r = Metodo.CuilATelefono(cuil_r)
+                celular_r = Efimero.CuilATelefono(cuil_r)
             except NoExiste:
                 return "Ese cuil no esta registrado, por favor verifique los datos"
             except Exception:
                 return "Ha ocurrido un error"
             else:
-                contacto_e = Contacto(cuil, telefono)
+                contacto_e = Contacto(cuil, telefono, nombre)
                 solicitud1 = Solicitud(contacto_e)
                 ciudadano = CrearCiudadano.crear_ciudadano(cuil_r, celular_r)
                 paquete = [solicitud1, ciudadano]
