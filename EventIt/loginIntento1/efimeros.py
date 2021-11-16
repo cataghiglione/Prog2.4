@@ -58,7 +58,6 @@ class Efimero:
                 paquete = [solicitud1, ciudadano]
                 return paquete
 
-
         elif len(str(info)) == 11:
             cuil_r = info
             try:
@@ -75,6 +74,7 @@ class Efimero:
                 return paquete
         else:
             raise DatosIncorrectos("Un cuil tiene 11 numeros, y un telefono 10, por favor verifique los datos ingresados")
+
     def rechazar(self,solicitud):
         contacto = solicitud.contacto
         ciudadano = CrearCiudadano.crear_ciudadano(contacto.cuil, contacto.numero)
