@@ -1,5 +1,4 @@
 
 class Solicitud:
-    def __init__(self, emisor, receptor):
+    def __init__(self, emisor):
         self.emisor = emisor
-        self.receptor = receptor
