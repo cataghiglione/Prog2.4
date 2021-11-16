@@ -1,10 +1,14 @@
 import csv
 from EventIt.usuarios.Administrador import Administrador
+from EventIt.usuarios.Ciudadano import Ciudadano
 from EventIt.Estadistica.Estadistica1 import Tablero
+from EventIt.loginIntento1.efimeros import Efimero
+from EventIt.anses.CrearCiudadano import CrearCiudadano
 from EventIt.mapa1.Mapa import Mapa
 from EventIt.mapa1.Evento import Evento
 from EventIt.Sensores.Sensor import Sensor
 from EventIt.Sensores.AdministracionSensores import AdministracionSensores
+
 
 
 
@@ -39,9 +43,12 @@ class FechaError(Exception):
 
 
 class NonAdminError(Exception):
-    def NonAdminErrorMsg(self, msg):
+    @classmethod
+    def NonAdminErrorMsg(cls, msg):
         return msg
 
+class FechaError(Exception):
+    pass
 
 miErro = Error()
 
@@ -211,14 +218,46 @@ class Function:
             except Exception:
                 return Error.ErrorMsg("Ingrese su Cuil de 11 digitos")
         print("Se ha iniciado sesion")
-        ciudadano = Ciudadano(,dato, int(Efimero.CuilATelefono()))
+        ciudadano = Ciudadano(Efimero.CuilANombre(dato),dato, int(Efimero.CuilATelefono(dato)))
+        return self.CitizenChoices(ciudadano)
 
     def CitizenChoices(self, ciudadano):
         while True:
             try:
+                accion = int(input("Ingrese:\n\t|1 para mandar solicitud\n\t|2 para ver las solicitudes pendientes\n\t|3 para reportar un evento a los administradores" +
+                                   "\n\t|4 para enviar información de un evento a tus contactos"))
+                if accion != 1 != 2 != 3 != 4:
+                    raise Error()
+                break
+            except Error:
+                print(Error.ErrorMsg('Ingrese valores validos.'))
+            except ValueError:
+                print('Ingrese únicamente valores numéricos entre 1 y 4')
+       # if accion == 1
 
-
-
+    def EventosLoop(self):
+        while True:
+            try:
+                x = int(input("Ingrese la longitud: "))
+                y = int(input("Ingrese la latitud: "))
+                tipo = input("Ingrese el tipo de evento: ")
+                nombre = input("Ingrese el nombre la localidad: ")
+                cantidadPersonas = int(input("Ingrese la cantidad de participantes: "))
+                fecha = input("Ingrese el Dia de hoy separando el dia y el mes con un espacio de barra: ")
+                if len(str(fecha)) != 5:
+                    raise FechaError()
+                break
+            except ValueError:
+                print("En latitud, longitud y cantidad de participantes ingrese valores numericos")
+            except FechaError:
+                print("No esta colocando correctamente la fecha, recuerde el espacios ;)")
+        Sensor.ReprotarAdministracion(x, y, nombre, tipo, cantidadPersonas, fecha)
+        AdministracionSensores.ReportarEventoAAdmin()
+        mi = Mapa()
+        mi.ReiniciarBotones()
+        mi.AgregarBoton(Evento(x, y, nombre, tipo, cantidadPersonas))
+        print(f"Su evento de {tipo} ha sido creado")
+        return self.Choice()
 
     def AdminLoop(self):
         counter = 0
