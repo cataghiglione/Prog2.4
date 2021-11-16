@@ -1,0 +1,50 @@
+Index: EventIt/solicitudes/solicitud.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nclass Solicitud:\r\n    def __init__(self, emisor, receptor):\r\n        self.emisor = emisor\r\n        self.receptor = receptor\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/EventIt/solicitudes/solicitud.py b/EventIt/solicitudes/solicitud.py
+--- a/EventIt/solicitudes/solicitud.py	
++++ b/EventIt/solicitudes/solicitud.py	
+@@ -1,5 +1,4 @@
+ 
+ class Solicitud:
+-    def __init__(self, emisor, receptor):
++    def __init__(self, emisor):
+         self.emisor = emisor
+-        self.receptor = receptor
+Index: EventIt/solicitudes/contacto.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class Contacto:\r\n    def __init__(self, cuil, numero):\r\n        self.cuil = cuil\r\n        self.numero = numero\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/EventIt/solicitudes/contacto.py b/EventIt/solicitudes/contacto.py
+--- a/EventIt/solicitudes/contacto.py	
++++ b/EventIt/solicitudes/contacto.py	
+@@ -1,4 +1,5 @@
+ class Contacto:
+-    def __init__(self, cuil, numero):
++    def __init__(self, cuil, numero, nombre):
+         self.cuil = cuil
+         self.numero = numero
++        self.nombre = nombre
+Index: EventIt/usuarios/Ciudadano.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from EventIt.anses.Exceptions1 import DatosIncorrectos\r\n\r\n\r\nclass Ciudadano:\r\n    def __init__(self, nombre,telefono, cuil):\r\n        self.nombre = nombre\r\n        self.telefono = telefono\r\n        self.cuil = cuil\r\n        self.contactos = []\r\n        self.solicitudes = []\r\n        self.bloqueado = False\r\n        self.intentos = 0\r\n\r\n    def mandarSolicitud(self, info):\r\n        if not self.bloqueado:\r\n            try:\r\n               paquete = Efimero.EnviarSolicitud(self.cuil, self.telefono, int(info))\r\n            except ValueError:\r\n                return \"Coloque un valor telefono o cuil del receptor\"\r\n            except DatosIncorrectos:\r\n                error = DatosIncorrectos(\"Los datos son incorrectos\")\r\n                return error.mensaje()\r\n            except Exception:\r\n                return \"Ha ocurrido un error\"\r\n            else:\r\n                solicitud = paquete[0]\r\n                receptor = paquete[1]\r\n                receptor.__recibirSolicitud(solicitud)\r\n                return True\r\n        else:\r\n            try:\r\n                raise Bloqueado\r\n            except Bloqueado:\r\n                error = Bloqueado(\"Estas bloqueado por bobina\")\r\n                return error.mensaje()\r\n\r\n    def verSolicitudes(self):\r\n        return self.solicitudes\r\n\r\n    #def rechazarSolicitud(self, solicitud):\r\n     #   self.solicitudes.remove(solicitud)\r\n      #  Efimero.rechazar(solicitud)\r\n\r\n    def aceptarSolicitud(self, solicitud):\r\n        if self.bloqueado == False:\r\n            if solicitud in self.solicitudes:\r\n                self.contactos.append(solicitud.emisor())\r\n\r\n    def reportarEvento(self, evento):\r\n        pass\r\n\r\n    def enviarInfoEvento(self, evento, contacto):\r\n        pass\r\n\r\n    def __recibirSolicitud(self, solicitud1):\r\n        self.solicitudes.append(solicitud1)\r\n\r\n\r\nclass Bloqueado(Exception):\r\n\r\n    def __init__(self, msg):\r\n        self.msg = msg\r\n\r\n    def mensaje(self):\r\n        return self.msg\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/EventIt/usuarios/Ciudadano.py b/EventIt/usuarios/Ciudadano.py
+--- a/EventIt/usuarios/Ciudadano.py	
++++ b/EventIt/usuarios/Ciudadano.py	
+@@ -1,4 +1,5 @@
+ from EventIt.anses.Exceptions1 import DatosIncorrectos
++from EventIt.loginIntento1.efimeros import Efimero
+ 
+ 
+ class Ciudadano:
