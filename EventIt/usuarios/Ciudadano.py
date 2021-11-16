@@ -1,5 +1,9 @@
 from EventIt.anses.Exceptions1 import DatosIncorrectos
+<<<<<<< HEAD
 # from EventIt.loginIntento1.efimeros import Efimero
+=======
+from anses.efimeros import Efimero
+>>>>>>> b5b4825df760182aaf048caf913705c0499dccee
 
 
 class Ciudadano:
