@@ -5,6 +5,7 @@ class Mapa:
     __eventos = []
     __botones = []
     master = Tk()
+
     def __init__(self):
 
         self.frame = Frame(Mapa.master)
@@ -16,7 +17,6 @@ class Mapa:
         self.label.pack()
         self.master.geometry(f'{self.imagen.width()}x{self.imagen.height()}')
         self.master.resizable(0,0)
-
 
     def AgregarBoton(self, evento):
         boton= MiBoton(self.frame, evento)
