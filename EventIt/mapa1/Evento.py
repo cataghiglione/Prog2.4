@@ -12,11 +12,15 @@ class Evento:
 
     def getType(self):
         return self.__type
+
     def getName(self):
         return self.__name
+
     def getX(self):
         return self.__x
+
     def getY(self):
         return self.__y
+
     def getCantidad(self):
         return self.__cantidadPersonas
