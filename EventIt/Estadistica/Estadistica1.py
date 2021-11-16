@@ -15,6 +15,20 @@ class Tablero:
         plt.stem(maximoC.getName(), maximoC.getCantidad())
         plt.show()
 
+    @classmethod
+    def Picos(cls, eventos):
+        lista = []
+        while True:
+            maximo = MaximoPersonas.getMaximo(eventos)
+            lista.append(maximo)
+            eventos.remove(maximo)
+            if len(eventos) == 0:
+                break
+        for evento in lista:
+            plt.stem(evento.getName(), evento.getCantidad())
+        plt.show()
+
+
 class MaximoPersonas:
 
     @classmethod
@@ -40,19 +54,3 @@ class MaximoPersonas:
         maximoC = MaximoPersonas.getMaximo(eventos)
         posibles_maximos = [maximoA, maximoB, maximoC]
         return posibles_maximos
-
-#class FakeEvento:
- #   def __init__(self, nombre, cantidad):
-  #      self.cantidad = cantidad
-   #     self.nombre = nombre
-  #  def __repr__(self):
-  #      return f"{self.cantidad}"
-   # def getCantidad(self):
-   #     return self.cantidad
-   # def getName(self):
-   #     return self.nombre
-
-#mievento = FakeEvento("Palermo", 20)
-#tuevento = FakeEvento("Himalaya", 2)
-#nuestroevento = FakeEvento("NuevaZelanda", 40)
-
