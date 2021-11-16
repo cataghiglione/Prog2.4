@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99cd3dbd-3649-4726-982e-5fb4a15d49fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/solicitudes/solicitud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventIt/Estadistica/Estadistica1.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/Estadistica/Estadistica1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventIt/anses/anses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventIt/loginIntento1/LoginIntefaz.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/loginIntento1/LoginIntefaz.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventIt/loginIntento1/efimeros.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/loginIntento1/efimeros.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventIt/solicitudes/contacto.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/solicitudes/contacto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventIt/solicitudes/solicitud.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/solicitudes/solicitud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventIt/usuarios/Ciudadano.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/usuarios/Ciudadano.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tp/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
