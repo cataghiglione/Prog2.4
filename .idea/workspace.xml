@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99cd3dbd-3649-4726-982e-5fb4a15d49fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Estadistica/Estadistica1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/AdministracionSensores.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/Reporte.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/Sensor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/CrearCiudadano.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/Exceptions1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/anses.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/efimeros.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/Anses.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/LoginIntefaz.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/coni.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/metodos.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/Evento.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/Mapa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/coni.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/solicitudes/contacto.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/solicitudes/solicitud.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/Estadistica/Estadistica1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/anses/anses.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/anses/efimeros.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/Anses.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/LoginIntefaz.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/coni.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa/Mapa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa/coni.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/Mapa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/coni.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/mapa1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/solicitudes/contacto.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/solicitudes/solicitud.py" beforeDir="false" />
-    </list>
+    <list default="true" id="99cd3dbd-3649-4726-982e-5fb4a15d49fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +30,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/EventIt" />
+    </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests for unit.MyTestCase.test_something">
     <configuration name="Python tests for unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -120,6 +93,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
