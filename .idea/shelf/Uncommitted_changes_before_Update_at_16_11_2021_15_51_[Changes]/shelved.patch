@@ -1,0 +1,307 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"99cd3dbd-3649-4726-982e-5fb4a15d49fc\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Estadistica/Estadistica1.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/AdministracionSensores.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/Reporte.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/Sensor.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/CrearCiudadano.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/Exceptions1.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/anses.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/efimeros.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/Anses.csv\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/LoginIntefaz.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/coni.png\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/metodos.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/Evento.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/Mapa.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/coni.png\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/solicitudes/contacto.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/solicitudes/solicitud.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/Estadistica/Estadistica1.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/anses/anses.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/anses/efimeros.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/Anses.csv\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/LoginIntefaz.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/coni.png\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa/Mapa.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa/coni.png\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/Mapa.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/coni.png\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/mapa1.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/solicitudes/contacto.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/solicitudes/solicitud.py\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n        <option value=\"Python Unit Test\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"20xOKJmh4gZ1DVDc8yEIWpqfZFb\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python tests.Python tests for unit.MyTestCase.test_something\">\r\n    <configuration name=\"Python tests for unit.MyTestCase.test_something\" type=\"tests\" factoryName=\"Autodetect\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Prog2.4\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/unittesting\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;unit.MyTestCase.test_something&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Python tests in unit.py\" type=\"tests\" factoryName=\"Autodetect\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Prog2.4\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/unittesting\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;$PROJECT_DIR$/unittesting/unit.py&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python tests.Python tests for unit.MyTestCase.test_something\" />\r\n        <item itemvalue=\"Python tests.Python tests in unit.py\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"99cd3dbd-3649-4726-982e-5fb4a15d49fc\" name=\"Changes\" comment=\"\" />\r\n      <created>1636982706723</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1636982706723</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/unittesting/unit.py</url>\r\n          <line>5</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/unittesting/unit.py</url>\r\n          <line>2</line>\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -6,36 +6,11 @@
+   <component name="ChangeListManager">
+     <list default="true" id="99cd3dbd-3649-4726-982e-5fb4a15d49fc" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Estadistica/Estadistica1.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/AdministracionSensores.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/Reporte.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/Sensores/Sensor.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/CrearCiudadano.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/Exceptions1.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/anses.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/anses/efimeros.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/Anses.csv" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/LoginIntefaz.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/coni.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/loginIntento1/metodos.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/Evento.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/Mapa.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/mapa1/coni.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/solicitudes/contacto.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/solicitudes/solicitud.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/Estadistica/Estadistica1.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/anses/anses.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/anses/efimeros.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/Anses.csv" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/LoginIntefaz.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/loginIntento1/coni.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa/Mapa.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa/coni.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/Mapa.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/coni.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/mapa1/mapa1.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/solicitudes/contacto.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/toqueCosasRarasConLosImportsPeroTodoFunciona/tp/solicitudes/solicitud.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/EventIt/anses/efimeros.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/loginIntento1/efimeros.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/EventIt/solicitudes/contacto.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/solicitudes/contacto.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/EventIt/solicitudes/solicitud.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/solicitudes/solicitud.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/EventIt/usuarios/Ciudadano.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventIt/usuarios/Ciudadano.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/solicitudes/solicitud.py" beforeDir="false" afterPath="$PROJECT_DIR$/solicitudes/solicitud.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -45,13 +20,21 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="Python Script" />
+         <option value="Python Unit Test" />
++        <option value="Python Script" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitSEFilterConfiguration">
++    <file-type-list>
++      <filtered-out-file-type name="LOCAL_BRANCH" />
++      <filtered-out-file-type name="REMOTE_BRANCH" />
++      <filtered-out-file-type name="TAG" />
++      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
++    </file-type-list>
+   </component>
+   <component name="ProjectId" id="20xOKJmh4gZ1DVDc8yEIWpqfZFb" />
+   <component name="ProjectViewState">
+@@ -63,22 +46,69 @@
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="RunManager" selected="Python tests.Python tests for unit.MyTestCase.test_something">
+-    <configuration name="Python tests for unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\catal\Documents\GitHub\Prog2.4\EventIt\loginIntento1" />
++    </key>
++  </component>
++  <component name="RunManager" selected="Python tests.Python tests for tests.ProbarEnviarSolicitud.test1">
++    <configuration name="Python tests for tests.ProbarEnviarSolicitud.test1" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+       <module name="Prog2.4" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittesting" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EventIt/unittesting" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;unit.MyTestCase.test_something&quot;" />
++      <option name="_new_target" value="&quot;tests.ProbarEnviarSolicitud.test1&quot;" />
++      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Python tests for tests.ProbarTelefonoACuil.test1" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
++      <module name="Prog2.4" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EventIt/unittesting" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <option name="_new_additionalArguments" value="&quot;&quot;" />
++      <option name="_new_target" value="&quot;tests.ProbarTelefonoACuil.test1&quot;" />
++      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Python tests for tests.ProbarTelefonoACuil.test2" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
++      <module name="Prog2.4" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EventIt/unittesting" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <option name="_new_additionalArguments" value="&quot;&quot;" />
++      <option name="_new_target" value="&quot;tests.ProbarTelefonoACuil.test2&quot;" />
++      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Python tests for tests.ProbarTelefonoACuil.test3" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
++      <module name="Prog2.4" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EventIt/unittesting" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <option name="_new_additionalArguments" value="&quot;&quot;" />
++      <option name="_new_target" value="&quot;tests.ProbarTelefonoACuil.test3&quot;" />
+       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="Python tests in unit.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
++    <configuration name="Python tests for unit.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+       <module name="Prog2.4" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -88,14 +118,17 @@
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <option name="_new_additionalArguments" value="&quot;&quot;" />
+-      <option name="_new_target" value="&quot;$PROJECT_DIR$/unittesting/unit.py&quot;" />
+-      <option name="_new_targetType" value="&quot;PATH&quot;" />
++      <option name="_new_target" value="&quot;unit.MyTestCase.test_something&quot;" />
++      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+       <method v="2" />
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Python tests.Python tests for tests.ProbarEnviarSolicitud.test1" />
++        <item itemvalue="Python tests.Python tests for tests.ProbarTelefonoACuil.test3" />
++        <item itemvalue="Python tests.Python tests for tests.ProbarTelefonoACuil.test2" />
++        <item itemvalue="Python tests.Python tests for tests.ProbarTelefonoACuil.test1" />
+         <item itemvalue="Python tests.Python tests for unit.MyTestCase.test_something" />
+-        <item itemvalue="Python tests.Python tests in unit.py" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -133,6 +166,26 @@
+           <url>file://$PROJECT_DIR$/unittesting/unit.py</url>
+           <line>2</line>
+           <option name="timeStamp" value="3" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/EventIt/unittesting/tests.py</url>
++          <line>5</line>
++          <option name="timeStamp" value="6" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/EventIt/unittesting/tests.py</url>
++          <line>16</line>
++          <option name="timeStamp" value="7" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/EventIt/loginIntento1/efimeros.py</url>
++          <line>52</line>
++          <option name="timeStamp" value="8" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
++          <url>file://$PROJECT_DIR$/EventIt/usuarios/Ciudadano.py</url>
++          <line>14</line>
++          <option name="timeStamp" value="9" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: EventIt/anses/efimeros.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/EventIt/anses/efimeros.py b/EventIt/loginIntento1/efimeros.py
+rename from EventIt/anses/efimeros.py
+rename to EventIt/loginIntento1/efimeros.py
+--- a/EventIt/anses/efimeros.py	
++++ b/EventIt/loginIntento1/efimeros.py	
+@@ -4,53 +4,63 @@
+ import csv
+ from EventIt.solicitudes.contacto import Contacto
+ from EventIt.solicitudes.solicitud import Solicitud
+-from EventIt.usuarios.Ciudadano import Ciudadano
++
+ from EventIt.usuarios.Administrador import Administrador
+ class Efimero:
+     @classmethod
+-    def CuilANombre(cls, telefono):
++    def TelefonoANombre(cls, telefono):
+         """Dado un Telefono obtengo un Cuil"""
+-        Anses = open("C:\Prog2.4-master\EventIt\loginIntento1\Anses.csv", "r")
++        Anses = open("Anses.csv", "r")
+         reader = csv.reader(Anses, delimiter="|")
+         for fila in reader:
+             if fila[1] == str(telefono):
+-                cuil = fila[2]
+-                return cuil
++                nombre = fila[0]
++                return nombre
+         raise NoExiste("No se encontro el telefono solicitado")
++    @classmethod
++    def CuilANombre(cls, cuil):
++        """Dado un Telefono obtengo un Cuil"""
++        Anses = open("Anses.csv", "r")
++        reader = csv.reader(Anses, delimiter="|")
++        for fila in reader:
++            if fila[2] == str(cuil):
++                nombre = fila[0]
++                return nombre
++        raise NoExiste("No se encontro el cuil solicitado")
+ 
+     @classmethod
+     def TelefonoACuil(cls, telefono):
+          """Dado un Telefono obtengo un Cuil"""
+-         Anses = open("C:\Prog2.4-master\EventIt\loginIntento1\Anses.csv", "r")
++         Anses = open("Anses.csv", "r")
+          reader = csv.reader(Anses, delimiter="|")
+          for fila in reader:
+              if fila [1] == str(telefono):
+-                 cuil = fila [2]
++                 cuil = int(fila [2])
+                  return cuil
+          raise NoExiste("No se encontro el telefono solicitado")
+ 
+     @classmethod
+     def CuilATelefono(cls, cuil):
+-        Anses = open("C:\Prog2.4-master\EventIt\loginIntento1\Anses.csv", "r")
++        Anses = open("Anses.csv", "r")
+         reader = csv.reader(Anses, delimiter="|")
+         for fila in reader:
+-            if fila[2] == cuil:
+-                telefono = fila[1]
++            if fila[2] == str(cuil):
++                telefono = int(fila[1])
+                 return telefono
+         raise NoExiste("No se encontro el cuil solicitado")
+ 
+     @classmethod
+-    def EnviarSolicitud(cls, cuil, telefono,nombre, info):
++    def EnviarSolicitud(cls, cuil_e, telefono_e,nombre_e, info):
+         if len(str(info)) == 10:
+             celular_r = info
+             try:
+-                cuil_r = Metodo.TelefonoACuil(celular_r)
++                cuil_r = Efimero.TelefonoACuil(celular_r)
+             except NoExiste:
+                 return "Ese telefono no esta registrado, por favor verifique los datos"
+             except Exception:
+                 return "Ha ocurrido un error"
+             else:
+-                contacto_e = Contacto(cuil, telefono, nombre)
++                contacto_e = Contacto(cuil_e, telefono_e, nombre_e)
+                 solicitud1 = Solicitud(contacto_e)
+                 ciudadano = CrearCiudadano.crear_ciudadano(cuil_r, celular_r)
+                 paquete = [solicitud1, ciudadano]
+@@ -66,7 +76,7 @@
+             except Exception:
+                 return "Ha ocurrido un error"
+             else:
+-                contacto_e = Contacto(cuil, telefono)
++                contacto_e = Contacto(cuil_e, telefono_e, nombre_e)
+                 solicitud1 = Solicitud(contacto_e)
+                 ciudadano = CrearCiudadano.crear_ciudadano(cuil_r, celular_r)
+                 paquete = [solicitud1, ciudadano]
+Index: solicitudes/solicitud.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from EventIt.anses.efimeros import efimero\r\nclass Solicitud:\r\n    def __init__(self, emisor, receptor):\r\n        self.emisor = emisor\r\n        self.receptor = receptor\r\n
+===================================================================
+diff --git a/solicitudes/solicitud.py b/solicitudes/solicitud.py
+--- a/solicitudes/solicitud.py	
++++ b/solicitudes/solicitud.py	
+@@ -1,4 +1,3 @@
+-from EventIt.anses.efimeros import efimero
+ class Solicitud:
+     def __init__(self, emisor, receptor):
+         self.emisor = emisor
