@@ -11,17 +11,23 @@ class Diccionario:
         self.dict[cuil] = ciudadano
 
     def quitar(self, cuil):
-        for key, value in self.dict.items():
-            if key == cuil:
-                self.dict.pop(key)
-                return True
-        raise e.Error.ErrorMsg('El cuil no fue encontrado.')
+        try:
+            for key, value in self.dict.items():
+                if key == cuil:
+                    self.dict.pop(key)
+                    return True
+            raise e.Error()
+        except e.Error:
+            return e.Error.ErrorMsg('El cuil no fue encontrado.')
 
     def buscar(self, cuil):
-        for key, value in self.dict.items():
-            if key == cuil:
-                return value
-        raise e.Error.ErrorMsg('El cuil no fue encontrado.')
+        try:
+            for key, value in self.dict.items():
+                if key == cuil:
+                    return value
+            raise e.Error()
+        except e.Error:
+            return e.Error.ErrorMsg('El cuil no fue encontrado.')
 
 
 ciudadanoList = Diccionario()
