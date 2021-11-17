@@ -13,7 +13,7 @@ class CrearCiudadano:
         Anses = open("Anses.csv", "r")
         reader = csv.reader(Anses, delimiter="|")
         for fila in reader:
-            if fila[1] == telefono and fila [2] == cuil:
+            if fila[1] == telefono and fila[2] == cuil:
                 nombre = fila[0]
                 return Ciudadano(nombre, telefono, cuil)
         Anses.close()
@@ -23,14 +23,15 @@ class Efimero:
 
     @classmethod
     def TelefonoACuil(cls, telefono):
-         """Dado un Telefono obtengo un Cuil"""
-         Anses = open("Anses.csv", "r")
-         reader = csv.reader(Anses, delimiter="|")
-         for fila in reader:
-             if fila[1] == str(telefono):
-                 cuil = int(fila [2])
-                 return cuil
-         raise NoExiste("No se encontro el telefono solicitado")
+        """Dado un Telefono obtengo un Cuil"""
+        Anses = open("Anses.csv", "r")
+        reader = csv.reader(Anses, delimiter="|")
+        for fila in reader:
+            if fila[1] == str(telefono):
+                cuil = int(fila[2])
+                return cuil
+        Anses.close()
+        raise NoExiste("No se encontro el telefono solicitado")
 
     @classmethod
     def CuilATelefono(cls, cuil):
@@ -40,10 +41,11 @@ class Efimero:
             if fila[2] == str(cuil):
                 telefono = int(fila[1])
                 return telefono
+        Anses.close()
         raise NoExiste("No se encontro el cuil solicitado")
 
     @classmethod
-    def EnviarSolicitud(cls, cuil, telefono, nombre, info):    #info: celular del receptor de la solicitud
+    def EnviarSolicitud(cls, cuil, telefono, nombre, info):  # info: celular del receptor de la solicitud
         if len(str(info)) == 10:
             celular_r = info
             try:
@@ -69,7 +71,7 @@ class Efimero:
             raise DatosIncorrectos(
                 "Un cuil tiene 11 numeros, y un telefono 10, por favor verifique los datos ingresados")
 
-    def rechazar(self,solicitud):
+    def rechazar(self, solicitud):
         contacto = solicitud.contacto
         ciudadano = CrearCiudadano.crear_ciudadano(contacto.cuil, contacto.numero)
         ciudadano.intentos += 1
@@ -77,4 +79,3 @@ class Efimero:
             ciudadano.bloqueado = True
             admin = Administrador()
             admin.bloqueados.append(ciudadano)
-
