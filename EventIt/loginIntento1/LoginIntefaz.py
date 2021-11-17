@@ -9,11 +9,27 @@ from EventIt.mapa1.Evento import Evento
 from EventIt.Sensores.Sensor import Sensor
 from EventIt.Sensores.AdministracionSensores import AdministracionSensores
 from EventIt.exceptions import e
+from EventIt.loginIntento1.efimeros import Efimero
 
 # Instancie administrador debido a que se trata siempre del mismo
 
 admin = Administrador()
 
+
+class Checker:
+    @classmethod
+    def CheckCuil(cls, cuil):
+        if len(cuil) == 11:
+            return True
+        else:
+            return False
+
+    @classmethod
+    def CheckTelefono(cls, telefono):
+        if len(telefono) == 10:
+            return True
+        else:
+            return False
 
 class Function:
     def Choice(self):
@@ -91,33 +107,30 @@ class Function:
         elif accion == 2:
             while True:
                 try:
-
-                    # me esta verificando que ya exista en el anses, y eso no me importa porque yo quiero ver que exista en eventit
                     nombre = input("Ingrese su nombre: ")
-                    if self.verificarDatosNoExistentes(nombre=nombre):
-                        raise e.CiudadanoExisteMismoTelefonooNombre()
                     telefono = int(input("Ingrese su numero de telefono: +54 9 "))
-                    if self.verificarDatosNoExistentes(telefono=telefono):
-                        raise e.CiudadanoExisteMismoTelefonooNombre()
                     if not Checker.CheckTelefono(str(telefono)):
                         raise e.ErrorTelefono()
-                    cuil = int(input("Ingrese su Cuil: "))
-                    if self.verificarDatosNoExistentes(cuil=cuil):
-                        raise e.CiudadanoExisteMismoCuil()
+                    cuil = int(input("Ingrese su Cuil (sin guiones, barras ni espacios): "))
                     if not Checker.CheckCuil(str(cuil)):
                         raise e.ErrorCuil()
                 except e.ErrorCuil:
                     print(e.ErrorCuil.getMsg('La cantidad de digitos para un cuil no corresponde (recuerde que deben ser 11)'))
-                except e.CiudadanoExisteMismoCuil:
-                    print(e.CiudadanoExisteMismoCuil.getMsg('Cuil ya existente'))
+                    self.CitizenLoop()
                 except e.ErrorTelefono:
                     print(e.ErrorTelefono.getMsg('Los digitos del telefono son incorrectos, intente nuevamente.'))
-                except e.CiudadanoExisteMismoTelefonooNombre:
-                    print(e.CiudadanoExisteMismoTelefonooNombre.getMsg('Disculpe, este usuario ya está registrado.'))
+                    self.CitizenLoop()
                 except ValueError:
                     print("Coloque solo numeros enteros para el telefono y el cuil")
+                    self.CitizenLoop()
+                except e.NoExiste:
+                    print(e.NoExiste.getMsg('No encontramos sus datos en Anses, por favor contáctese con las oficinas correspondientes.'))
+                    self.CitizenLoop()
+                except e.CiudadanoYaRegistrado:
+                    print(e.CiudadanoYaRegistrado.getMsg('Usted ya se encuentra registrado en EventIt, debe ingresar a su cuenta ya existente presionando 1 y completando sus datos.'))
+                    self.CitizenLoop()
                 else:
-                    self.registrarCiudadanoAnses(nombre.title(), int(telefono), int(cuil)) #NO ENTIENDO
+                    print(self.registrarCiudadanoEventIt(nombre.title(), int(telefono), int(cuil)))
                     ciudadano = Ciudadano(nombre, int(telefono), int(cuil))
                     ciudadanoList.agregar(int(cuil), ciudadano)
                     self.CitizenLoop()
@@ -133,27 +146,41 @@ class Function:
         Anses.close()
         return False
 
-    def verificarDatosNoExistentes(self, nombre="", telefono=0, cuil=0):
-        Anses = open("Anses.csv", "r")
-        reader = csv.reader(Anses, delimiter="|")
+    def verificarDatosEventIt(self, nombre, telefono, cuil):
+        Eventit = open("EventIt.csv", "r")
+        reader = csv.reader(Eventit, delimiter="|")
         datos = [nombre, str(telefono), str(cuil)]
-        for fila in reader:
-            if fila[0] == datos[0] or fila[1] == datos[1] or fila[2] == datos[2]:
-                return True
-        Anses.close()
-        return False
+        try:
+            for fila in reader:
+                if fila[0] == datos[0] and fila[1] == datos[1] and fila[2] == datos[2]:
+                    raise e.CiudadanoYaRegistrado()       # No puede registrarse con eventit porque ya existe ahi, tiene que loginearse
+            # Puede registrarse en EvenIt ya que sus datos no estan en el archivo
+        except e.CiudadanoYaRegistrado:
+            return True
+        else:
+            return False
 
-    def registrarCiudadanoAnses(self, nombre, telefono, cuil):
-        verificacion = self.verificar(nombre, telefono, cuil)
-        if verificacion:
-            return "Ya existe una cuenta con estos datos"
-        elif not verificacion:
-            Anses = open("Anses.csv", "a", newline="")
-            writer = csv.writer(Anses, delimiter="|")
-            datos = [nombre, telefono, cuil]
-            writer.writerow(datos)
-            Anses.close()
-            return "Registrado"
+    def registrarCiudadanoEventIt(self, nombre, telefono, cuil):
+        verificacionAnses = self.verificar(nombre, telefono, cuil)  # se fija que existas en el Anses
+        if verificacionAnses:  #estas en el anses, dale para adelante
+            verificacionEventIt = self.verificarDatosEventIt(nombre, telefono, cuil)
+            if not verificacionEventIt:
+                Eventit = open("EventIt.csv", "a", newline="")
+                writer = csv.writer(Eventit, delimiter="|")
+                datos = [nombre, telefono, cuil]
+                writer.writerow(datos)
+                Eventit.close()
+                return 'Ya estas registrado en Eventit'
+            try:
+                if verificacionEventIt:
+                    raise e.CiudadanoYaRegistrado()
+            except e.CiudadanoYaRegistrado:
+                print(e.CiudadanoYaRegistrado.getMsg('Ya estas registrado en EventIt, debes iniciar sesión.'))
+        elif not verificacionAnses:
+            try:
+                raise e.NoExiste()
+            except e.NoExiste:
+                print(e.NoExiste.getMsg('No encontramos sus datos en Anses, por favor contáctese con las oficinas correspondientes.'))
 
     def CitizenLogIn(self):
         while True:
@@ -161,11 +188,18 @@ class Function:
                 cuil = input("Ingrese su Cuil: ")
                 if not Checker.CheckCuil(str(cuil)):
                     raise e.ErrorCuil()
+                if not self.verificarDatosEventIt(Efimero.CuilANombreEventIt(cuil), Efimero.CuilATelefonoEventIt(cuil), cuil):
+                    raise e.NoExiste()
                 break
             except ValueError:
-                return e.Error.ErrorMsg("Ingrese valores numéricos")
-            except Exception:
-                return e.Error.ErrorMsg("Ingrese su Cuil de 11 digitos")
+                print(e.Error.ErrorMsg("Ingrese valores numéricos"))
+            except e.ErrorCuil:
+                print(e.ErrorCuil.getMsg("Ingrese su Cuil de 11 digitos"))
+            except e.NoExiste:
+                print(e.NoExiste.getMsg('No se encontro el cuil solicitado, por favor registrese'))
+                self.CitizenLoop()
+            # except Exception:
+            #     print('Error')
         print("Se ha iniciado sesion")
         ciudadano = ciudadanoList.buscar(cuil)
         return self.CitizenChoices(ciudadano)
@@ -240,30 +274,7 @@ class Function:
 
 functions = Function()
 
-
 prueba = Function()
 prueba.CitizenLoop()
 
 
-class Checker:
-    @classmethod
-    def CheckCuil(self, cuil):
-        if len(cuil) == 11:
-            return True
-        else:
-            return False
-
-    @classmethod
-    def CheckDni(self, dni):
-        """Si es un dni retorna True"""
-        if len(dni) == 8:
-            return True
-        else:
-            return False
-
-    @classmethod
-    def CheckTelefono(self, telefono):
-        if len(telefono) == 10:
-            return True
-        else:
-            return False
