@@ -1,9 +1,6 @@
 from EventIt.anses.Exceptions1 import DatosIncorrectos
-<<<<<<< HEAD
-# from EventIt.loginIntento1.efimeros import Efimero
-=======
-from anses.efimeros import Efimero
->>>>>>> b5b4825df760182aaf048caf913705c0499dccee
+
+from EventIt.exceptions.e import Bloqueado
 
 
 class Ciudadano:
@@ -36,7 +33,7 @@ class Ciudadano:
             try:
                 raise Bloqueado
             except Bloqueado:
-                error = Bloqueado("Estas bloqueado por bobina")
+                error = Bloqueado("El usuario se encuentra bloqueado")
                 return error.mensaje()
 
     def verSolicitudes(self):
@@ -47,7 +44,7 @@ class Ciudadano:
       #  Efimero.rechazar(solicitud)
 
     def aceptarSolicitud(self, solicitud):
-        if self.bloqueado == False:
+        if not self.bloqueado:
             if solicitud in self.solicitudes:
                 self.contactos.append(solicitud.emisor())
 
@@ -61,21 +58,11 @@ class Ciudadano:
         self.solicitudes.append(solicitud1)
 
 
-class Bloqueado(Exception):
-
-    def __init__(self, msg):
-        self.msg = msg
-
-    def mensaje(self):
-        return self.msg
-
-
 from EventIt.anses.Exceptions1 import NoExiste, DatosIncorrectos
 from EventIt.loginIntento1.metodos import Metodo
 from EventIt.solicitudes.contacto import Contacto
 from EventIt.solicitudes.solicitud import Solicitud
 from EventIt.usuarios.Administrador import Administrador
-from EventIt.usuarios.Ciudadano import Ciudadano
 import csv
 
 
@@ -156,8 +143,7 @@ class Efimero:
                 paquete = [solicitud1, ciudadano]
                 return paquete
         else:
-            raise DatosIncorrectos(
-                "Un cuil tiene 11 numeros, y un telefono 10, por favor verifique los datos ingresados")
+            raise DatosIncorrectos("Un cuil tiene 11 numeros, y un telefono 10, por favor verifique los datos ingresados")
 
     def rechazar(self, solicitud):
         contacto = solicitud.contacto
