@@ -91,6 +91,8 @@ class Function:
         elif accion == 2:
             while True:
                 try:
+
+                    # me esta verificando que ya exista en el anses, y eso no me importa porque yo quiero ver que exista en eventit
                     nombre = input("Ingrese su nombre: ")
                     if self.verificarDatosNoExistentes(nombre=nombre):
                         raise e.CiudadanoExisteMismoTelefonooNombre()
@@ -104,12 +106,18 @@ class Function:
                         raise e.CiudadanoExisteMismoCuil()
                     if not Checker.CheckCuil(str(cuil)):
                         raise e.ErrorCuil()
+                except e.ErrorCuil:
+                    print(e.ErrorCuil.getMsg('La cantidad de digitos para un cuil no corresponde (recuerde que deben ser 11)'))
+                except e.CiudadanoExisteMismoCuil:
+                    print(e.CiudadanoExisteMismoCuil.getMsg('Cuil ya existente'))
+                except e.ErrorTelefono:
+                    print(e.ErrorTelefono.getMsg('Los digitos del telefono son incorrectos, intente nuevamente.'))
+                except e.CiudadanoExisteMismoTelefonooNombre:
+                    print(e.CiudadanoExisteMismoTelefonooNombre.getMsg('Disculpe, este usuario ya está registrado.'))
                 except ValueError:
                     print("Coloque solo numeros enteros para el telefono y el cuil")
-                except Exception:
-                    print("Un Cuil posee 11 digitos y un telefono 10")
                 else:
-                    self.registrarCiudadanoAnses(nombre.title(), int(telefono), int(cuil))
+                    self.registrarCiudadanoAnses(nombre.title(), int(telefono), int(cuil)) #NO ENTIENDO
                     ciudadano = Ciudadano(nombre, int(telefono), int(cuil))
                     ciudadanoList.agregar(int(cuil), ciudadano)
                     self.CitizenLoop()
@@ -243,7 +251,6 @@ class Checker:
         if len(cuil) == 11:
             return True
         else:
-            print("raro")
             return False
 
     @classmethod
