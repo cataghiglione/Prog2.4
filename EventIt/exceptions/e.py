@@ -10,9 +10,6 @@ class CiudadanoYaRegistrado(Exception):
         return msg
 
 
-
-
-
 class NoExiste(Exception):
     @classmethod
     def getMsg(cls, msg):
