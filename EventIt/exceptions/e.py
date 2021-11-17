@@ -4,8 +4,19 @@ class Error(Exception):
         return msg
 
 
+class CiudadanoYaRegistrado(Exception):
+    @classmethod
+    def getMsg(cls, msg):
+        return msg
+
+
+
+
+
 class NoExiste(Exception):
-    pass
+    @classmethod
+    def getMsg(cls, msg):
+        return msg
 
 
 class DatosIncorrectos(Exception):
