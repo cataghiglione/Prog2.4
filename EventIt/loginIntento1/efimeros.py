@@ -123,5 +123,4 @@ class Efimero:
         ciudadano.intentos += 1
         if ciudadano.intentos == 5:
             ciudadano.bloqueado = True
-            admin = Administrador()
-            admin.bloqueados.append(ciudadano)
+            Administrador.bloqueados.append(ciudadano)
