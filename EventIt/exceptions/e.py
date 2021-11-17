@@ -4,6 +4,14 @@ class Error(Exception):
         return msg
 
 
+class NoExiste(Exception):
+    pass
+
+
+class DatosIncorrectos(Exception):
+    pass
+
+
 class ErrorCuil(Exception):
     pass
 
