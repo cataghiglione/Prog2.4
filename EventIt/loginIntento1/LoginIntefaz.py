@@ -12,7 +12,6 @@ from EventIt.exceptions import e
 from EventIt.loginIntento1.efimeros import Efimero
 
 # Instancie administrador debido a que se trata siempre del mismo
-
 admin = Administrador()
 
 
@@ -31,6 +30,7 @@ class Checker:
         else:
             return False
 
+
 class Function:
     def Choice(self):
         while True:
@@ -42,7 +42,7 @@ class Function:
                 break
             except ValueError:
                 print("Coloque uno de los valores solicitados ;)")
-            except:
+            except Exception:
                 print("Coloque uno de los valores solicitados")
 
         if accion == 1:
@@ -162,7 +162,7 @@ class Function:
 
     def registrarCiudadanoEventIt(self, nombre, telefono, cuil):
         verificacionAnses = self.verificar(nombre, telefono, cuil)  # se fija que existas en el Anses
-        if verificacionAnses:  #estas en el anses, dale para adelante
+        if verificacionAnses:  # estas en el anses, dale para adelante
             verificacionEventIt = self.verificarDatosEventIt(nombre, telefono, cuil)
             if not verificacionEventIt:
                 Eventit = open("EventIt.csv", "a", newline="")
@@ -249,16 +249,16 @@ class Function:
         while counter < 3:
             try:
                 contrasena = input("Ingrese la contraseña de Administrador: ")
-                if contrasena == "Sumbudrule":
-                    print("Creaste un Admin!!!!!!!!!")
+                if contrasena == "contrasena":
+                    print("Creaste un Admin!")
                     return -1  # llamo a AdminChoices(admin)
-                elif contrasena != "Sumbudrule":
+                elif contrasena != "contrasena":
                     raise e.NonAdminError()
                 break
-            except:
-                print("Si sos admin, poné bien la contra ;)")
+            except Exception:
+                print("Si sos admin, ingrese correctamente su clave.")
                 counter += 1
-        print("Vos no sos Admin, comunicate con un psicologo")
+        print("Tu usuario no corresponde al de un administrados")
         print("...Volviendo al inicio...")
         return self.Choice()
 
