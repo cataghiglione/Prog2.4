@@ -1,4 +1,5 @@
 from EventIt.anses.Exceptions1 import DatosIncorrectos
+from EventIt.diccionario import ciudadanoList
 
 from EventIt.exceptions.e import Bloqueado
 
@@ -112,7 +113,7 @@ class Efimero:
         raise NoExiste("No se encontro el cuil solicitado")
 
     @classmethod
-    def EnviarSolicitud(cls, cuil, telefono, nombre, info):
+    def EnviarSolicitud(cls, cuil, telefono, nombre, info): #info: celular del receptor de la solicitud
         if len(str(info)) == 10:
             celular_r = info
             try:
@@ -124,26 +125,19 @@ class Efimero:
             else:
                 contacto_e = Contacto(cuil, telefono, nombre)
                 solicitud1 = Solicitud(contacto_e)
-                ciudadano = CrearCiudadano.crear_ciudadano(cuil_r, celular_r)
-                paquete = [solicitud1, ciudadano]
+                ciudadano_r = ciudadanoList.buscar(cuil_r)
+                paquete = [solicitud1, ciudadano_r]
                 return paquete
-
         elif len(str(info)) == 11:
             cuil_r = info
-            try:
-                celular_r = Efimero.CuilATelefono(cuil_r)
-            except NoExiste:
-                return "Ese cuil no esta registrado, por favor verifique los datos"
-            except Exception:
-                return "Ha ocurrido un error"
-            else:
-                contacto_e = Contacto(cuil, telefono, nombre)
-                solicitud1 = Solicitud(contacto_e)
-                ciudadano = CrearCiudadano.crear_ciudadano(cuil_r, celular_r)
-                paquete = [solicitud1, ciudadano]
-                return paquete
+            contacto_e = Contacto(cuil, telefono, nombre)
+            solicitud1 = Solicitud(contacto_e)
+            ciudadano_r = ciudadanoList.buscar(cuil_r)
+            paquete = [solicitud1, ciudadano_r]
+            return paquete
         else:
-            raise DatosIncorrectos("Un cuil tiene 11 numeros, y un telefono 10, por favor verifique los datos ingresados")
+            raise DatosIncorrectos(
+                "Un cuil tiene 11 numeros, y un telefono 10, por favor verifique los datos ingresados")
 
     def rechazar(self, solicitud):
         contacto = solicitud.contacto
