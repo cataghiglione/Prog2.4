@@ -14,10 +14,10 @@ class Ciudadano:
         self.bloqueado = False
         self.intentos = 0
 
-    def mandarSolicitud(self, info):
+    def mandarSolicitud(self, infoReceptor):
         if not self.bloqueado:
             try:
-               paquete = Efimero.EnviarSolicitud(self.cuil, self.telefono, self.nombre, int(info))
+               paquete = Efimero.EnviarSolicitud(self.cuil, self.telefono, self.nombre, infoReceptor)
             except ValueError:
                 return "Coloque un valor telefono o cuil del receptor"
             except DatosIncorrectos:
