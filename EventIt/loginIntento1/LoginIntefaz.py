@@ -4,7 +4,6 @@ from EventIt.diccionario import ciudadanoList
 from EventIt.usuarios.Administrador import Administrador
 from EventIt.usuarios.Ciudadano import Ciudadano
 from EventIt.Estadistica.Estadistica1 import Tablero
-from EventIt.loginIntento1.efimeros import Efimero
 from EventIt.mapa1.Mapa import Mapa
 from EventIt.mapa1.Evento import Evento
 from EventIt.Sensores.Sensor import Sensor
@@ -108,7 +107,7 @@ class Function:
                 except ValueError:
                     print("Coloque solo numeros enteros para el telefono y el cuil")
                 except Exception:
-                    print("Un Cuil posee 11 digitos y un telefono 8 digitos ;)")
+                    print("Un Cuil posee 11 digitos y un telefono 10")
                 else:
                     self.registrarCiudadanoAnses(nombre.title(), int(telefono), int(cuil))
                     ciudadano = Ciudadano(nombre, int(telefono), int(cuil))
@@ -232,6 +231,10 @@ class Function:
 
 
 functions = Function()
+
+
+prueba = Function()
+prueba.CitizenLoop()
 
 
 class Checker:
