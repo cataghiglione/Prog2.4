@@ -4,6 +4,7 @@ from EventIt.solicitudes.contacto import Contacto
 from EventIt.solicitudes.solicitud import Solicitud
 from EventIt.usuarios.Administrador import Administrador
 from EventIt.usuarios.Ciudadano import Ciudadano
+from EventIt.exceptions import e
 import csv
 
 
@@ -29,9 +30,54 @@ class Efimero:
         for fila in reader:
             if fila[1] == str(telefono):
                 cuil = int(fila[2])
+                Anses.close()
                 return cuil
-        Anses.close()
         raise NoExiste("No se encontro el telefono solicitado")
+
+    @classmethod
+    def CuilANombre(cls, cuil):
+        """Dado un cuil obtengo un nombre"""
+        Anses = open("Anses.csv", "r")
+        reader = csv.reader(Anses, delimiter="|")
+        try:
+            for fila in reader:
+                if fila[2] == str(cuil):
+                    nombre = fila[0]
+                    Anses.close()
+                    return nombre
+            raise e.NoExiste()
+        except NoExiste:
+            print(e.NoExiste.getMsg('No se encontro el cuil solicitado.'))
+
+    @classmethod
+    def CuilANombreEventIt(cls, cuil):
+        """Dado un cuil obtengo un nombre"""
+        EventIt = open("EventIt.csv", "r")
+        reader = csv.reader(EventIt, delimiter="|")
+        try:
+            for fila in reader:
+                if fila[2] == str(cuil):
+                    nombre = fila[0]
+                    EventIt.close()
+                    return nombre
+            raise e.NoExiste()
+        except NoExiste:
+            print(e.NoExiste.getMsg('No se encontro el cuil solicitado.'))
+
+    @classmethod
+    def CuilATelefonoEventIt(cls, cuil):
+        """Dado un cuil obtengo un nombre"""
+        EventIt = open("EventIt.csv", "r")
+        reader = csv.reader(EventIt, delimiter="|")
+        try:
+            for fila in reader:
+                if fila[2] == str(cuil):
+                    telefono = int(fila[1])
+                    EventIt.close()
+                    return telefono
+            raise e.NoExiste()
+        except NoExiste:
+            print(e.NoExiste.getMsg('No se encontro el cuil solicitado.'))
 
     @classmethod
     def CuilATelefono(cls, cuil):
@@ -40,8 +86,8 @@ class Efimero:
         for fila in reader:
             if fila[2] == str(cuil):
                 telefono = int(fila[1])
+                Anses.close()
                 return telefono
-        Anses.close()
         raise NoExiste("No se encontro el cuil solicitado")
 
     @classmethod
