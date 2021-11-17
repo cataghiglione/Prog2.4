@@ -1,6 +1,9 @@
 import unittest
-# from EventIt.loginIntento1.efimeros import Efimero
-from EventIt.usuarios.Ciudadano import Ciudadano, Efimero
+from EventIt.diccionario import ciudadanoList
+from EventIt.loginIntento1.LoginIntefaz import functions
+from EventIt.usuarios.Ciudadano import Ciudadano
+
+
 class ProbarTelefonoACuil(unittest.TestCase):
     def test1(self):
         c = Efimero.TelefonoACuil(1135655745)
@@ -12,8 +15,13 @@ class ProbarTelefonoACuil(unittest.TestCase):
         c = Efimero.CuilATelefono(27439744184)
         self.assertEqual(c, 1135655745)
 
+
 class ProbarEnviarSolicitud(unittest.TestCase):
     def test1(self):
         cata = Ciudadano("Catalina Ghiglione", 1135655745, 27439744184)
-        a = cata.mandarSolicitud(27447884522)
+        valen = Ciudadano("Valentina Valenzi", 1135655742, 27339744184)
+        ciudadanoList.agregar(27339744184, valen)
+        ciudadanoList.agregar(cata.cuil, cata)
+        a = cata.mandarSolicitud(27339744184)
         self.assertEqual(a, True)
+
