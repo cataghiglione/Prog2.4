@@ -207,14 +207,36 @@ class Function:
     def CitizenChoices(self, ciudadano):
         while True:
             try:
-                accion = int(input(
+                accion = input(
                     "Ingrese:\n\t|1 para mandar solicitud\n\t|2 para ver las solicitudes pendientes\n\t|3 para reportar un evento a los administradores" +
-                    "\n\t|4 para enviar información de un evento a tus contactos"))
-                if accion != 1 != 2 != 3 != 4:
+                    "\n\t|4 para enviar información de un evento a tus contactos" + "\n\t|5 para regresar al menú" + "\n\t¿Qué desea hacer?: ")
+                if accion != '1' != '2' != '3' != '4' != '5':
                     raise e.Error()
+                if accion == '1':
+                    while True:
+                        try:
+                            cuilReceptor = input('Ingrese el cuil del usuario al que le quiere enviar la solicitud: ')
+                            if not Checker.CheckCuil(cuilReceptor):
+                                raise e.ErrorCuil()
+                            break
+                        except e.ErrorCuil:
+                            print(e.ErrorCuil.getMsg('Un cuil tiene 11 digitos. Por favor ingreselo nuevamente'))
+                        except Exception:
+                            print('Error, ingrese el cuil sin espacios, guiones ni caracteres distintos de numeros.')
+                    ciudadano.mandarSolicitud(cuilReceptor)
+                    print('La solicitud ha sido enviada')
+                if accion == '2':
+                    ciudadano.verSolicitudes()
+                if accion == '3':
+                    pass
+                if accion == '4':
+                    pass
+                if accion == '5':
+                    self.CitizenLoop()
                 break
             except e.Error:
-                print(e.Error.ErrorMsg('Ingrese valores validos.'))
+                print(e.Error.ErrorMsg('Por favor, ingrese valores validos.'))
+                self.CitizenChoices()
             except ValueError:
                 print('Ingrese únicamente valores numéricos entre 1 y 4')
 
@@ -235,8 +257,8 @@ class Function:
             except ValueError:
                 print("En latitud, longitud y cantidad de participantes ingrese valores numericos")
             except e.FechaError:
-                print("No esta colocando correctamente la fecha, recuerde el espacios ;)")
-        Sensor.ReprotarAdministracion(x, y, nombre, tipo, cantidadPersonas, fecha)
+                print("No esta colocando correctamente la fecha, recuerde el espacios")
+        Sensor.ReportarAdministracion(x, y, nombre, tipo, cantidadPersonas, fecha)
         AdministracionSensores.ReportarEventoAAdmin()
         mi = Mapa()
         mi.ReiniciarBotones()
