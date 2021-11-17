@@ -13,23 +13,33 @@ class DatosIncorrectos(Exception):
 
 
 class ErrorCuil(Exception):
-    pass
+    @classmethod
+    def getMsg(cls, msg):
+        return msg
 
 
 class ErrorTelefono(Exception):
-    pass
+    @classmethod
+    def getMsg(cls, msg):
+        return msg
 
 
 class CiudadanoExisteMismoTelefonooNombre(Exception):
-    pass
+    @classmethod
+    def getMsg(cls, msg):
+        return msg
 
 
 class CiudadanoExisteMismoCuil(Exception):
-    pass
+    @classmethod
+    def getMsg(cls, msg):
+        return msg
 
 
 class FechaError(Exception):
-    pass
+    @classmethod
+    def getMsg(cls, msg):
+        return msg
 
 
 class NonAdminError(Exception):
