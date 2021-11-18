@@ -10,6 +10,7 @@ from EventIt.Sensores.Sensor import Sensor
 from EventIt.Sensores.AdministracionSensores import AdministracionSensores
 from EventIt.exceptions import e
 from EventIt.loginIntento1.efimeros import Efimero
+from EventIt.solicitudes.solicitud import Solicitud
 
 # Instancie administrador debido a que se trata siempre del mismo
 admin = Administrador()
@@ -36,15 +37,14 @@ class Function:
         while True:
             try:
                 accion = int(input(
-                    "Ingrese: \n\t|1 para Ciudadano\n\t|2 Para Admin \n\t|3 Para ver el Mapa \n\t|4 Para ver el tablero \n\t|5 Para crear un evento: "))
+                    "Ingrese: \n\t|1 para Ciudadano\n\t|2 Para Admin \n\t|3 Para ver el Mapa \n\t|4 Para ver el tablero \n\t|5 Para crear un evento \n\t ¿Que desea hacer?: "))
                 if accion != 1 and accion != 2 and accion != 3 and accion != 4 and accion != 5:
                     raise e.Error()
                 break
             except ValueError:
-                print("Coloque uno de los valores solicitados ;)")
+                print("Coloque uno de los valores solicitados")
             except Exception:
                 print("Coloque uno de los valores solicitados")
-
         if accion == 1:
             return self.CitizenLoop()
         elif accion == 2:
@@ -56,12 +56,12 @@ class Function:
         elif accion == 5:
             return self.EventosLoop()
         else:
-            print("Hay un error obteniendo usuario ;)")
+            print("Hay un error obteniendo usuario")
 
     def StatisticsLoop(self):
         while True:
             try:
-                accion = int(input("|Ingrese 1 para ver el tablero \n|2 para "))
+                accion = int(input("|Ingrese 1 para ver el tablero \n|2 para regresar al menú principal \n ¿Qué desea hacer?: "))
                 if accion != 1 and accion != 2:
                     raise e.Error()
                 break
@@ -80,7 +80,7 @@ class Function:
     def MapLoop(self):
         while True:
             try:
-                accion = int(input('Ingrese: \n\t|1 para ver el mapa\n\t|2 para volver al LogIn'))
+                accion = int(input('Ingrese: \n\t|1 para ver el mapa\n\t|2 para volver al LogIn \n\t¿Qué desea hacer?:'))
                 if accion != 1 and accion != 2:
                     raise e.Error()
                 break
@@ -98,7 +98,7 @@ class Function:
     def CitizenLoop(self):
         while True:
             try:
-                accion = int(input("Si esta registrado presione 1, si quiere registrarse presione 2: "))
+                accion = int(input("Ingrese: \n\t|1 Si ya está registrado \n\t|2 Si desea registrarse \n\t|3 Si desea volver hacia atrás \n\t¿Qué desea hacer?:"))
                 break
             except ValueError:
                 print("Ingrese el numero solicitado")
@@ -121,7 +121,7 @@ class Function:
                     print(e.ErrorTelefono.getMsg('Los digitos del telefono son incorrectos, intente nuevamente.'))
                     self.CitizenLoop()
                 except ValueError:
-                    print("Coloque solo numeros enteros para el telefono y el cuil")
+                    print("Coloque sólo numeros enteros para el telefono y el cuil")
                     self.CitizenLoop()
                 except e.NoExiste:
                     print(e.NoExiste.getMsg('No encontramos sus datos en Anses, por favor contáctese con las oficinas correspondientes.'))
@@ -196,13 +196,43 @@ class Function:
             except e.ErrorCuil:
                 print(e.ErrorCuil.getMsg("Ingrese su Cuil de 11 digitos"))
             except e.NoExiste:
-                print(e.NoExiste.getMsg('No se encontro el cuil solicitado, por favor registrese'))
+                print(e.NoExiste.getMsg('No se encontró el cuil solicitado, por favor registrese'))
                 self.CitizenLoop()
             # except Exception:
             #     print('Error')
-        print("Se ha iniciado sesion")
+        print("Se ha iniciado sesión")
         ciudadano = ciudadanoList.buscar(cuil)
         return self.CitizenChoices(ciudadano)
+
+    def CiudadanoMandarSolicitud(self, ciudadano):
+        while True:
+            try:
+                infoReceptor = input('Ingrese el cuil o telefono del usuario al que le quiere enviar la solicitud: ')
+                ciudadano.mandarSolicitud(infoReceptor)
+            except e.Error:
+                print(e.Error.ErrorMsg('Un cuil tiene 11 digitos y un telefono 10. Por favor ingréselo nuevamente'))
+            except Exception:
+                print('Error, ingrese el cuil o el teléfono sin espacios, guiones ni caracteres distintos de numeros.')
+            else:
+                print('La solicitud ha sido enviada')
+            break
+
+    def interaccionSolicitudes(self, ciudadano):
+        while True:
+            try:
+                ciudadano.verSolicitudes()
+                inter = input('Ingrese:  \n\t|1 para aceptar una solicitud' + '\n\t|2 para rechazar una solicitud' + '\n\t|3 para regresar' + '\n\t¿Qué desea hacer?: ')
+                if inter != '1' != '2' != '3':
+                    raise e.Error()
+                if inter == '1':
+                    solicitud = input('Ingrese el cuil del emisor de la solicitud que desea aceptar: ')
+                    for soli in ciudadano.solicitudes:
+                        if solicitud == soli.getCuilEmisor():
+                            ciudadano.aceptarSolicitud(soli)
+                            pass
+
+            except e.Error:
+                print(e.Error.ErrorMsg('Por favor, ingrese valores validos.'))
 
     def CitizenChoices(self, ciudadano):
         while True:
@@ -213,20 +243,9 @@ class Function:
                 if accion != '1' != '2' != '3' != '4' != '5':
                     raise e.Error()
                 if accion == '1':
-                    while True:
-                        try:
-                            cuilReceptor = input('Ingrese el cuil del usuario al que le quiere enviar la solicitud: ')
-                            if not Checker.CheckCuil(cuilReceptor):
-                                raise e.ErrorCuil()
-                            break
-                        except e.ErrorCuil:
-                            print(e.ErrorCuil.getMsg('Un cuil tiene 11 digitos. Por favor ingreselo nuevamente'))
-                        except Exception:
-                            print('Error, ingrese el cuil sin espacios, guiones ni caracteres distintos de numeros.')
-                    ciudadano.mandarSolicitud(cuilReceptor)
-                    print('La solicitud ha sido enviada')
+                    self.CiudadanoMandarSolicitud(ciudadano)
                 if accion == '2':
-                    ciudadano.verSolicitudes()
+                    self.interaccionSolicitudes(ciudadano)
                 if accion == '3':
                     pass
                 if accion == '4':
@@ -235,12 +254,10 @@ class Function:
                     self.CitizenLoop()
                 break
             except e.Error:
-                print(e.Error.ErrorMsg('Por favor, ingrese valores validos.'))
-                self.CitizenChoices()
+                print(e.Error.ErrorMsg('Por favor, ingrese valores válidos.'))
+                self.CitizenChoices(ciudadano)
             except ValueError:
                 print('Ingrese únicamente valores numéricos entre 1 y 4')
-
-    # if accion == 1
 
     def EventosLoop(self):
         while True:
@@ -248,7 +265,7 @@ class Function:
                 x = int(input("Ingrese la longitud: "))
                 y = int(input("Ingrese la latitud: "))
                 tipo = input("Ingrese el tipo de evento: ")
-                nombre = input("Ingrese el nombre la localidad: ")
+                nombre = input("Ingrese el nombre de la localidad: ")
                 cantidadPersonas = int(input("Ingrese la cantidad de participantes: "))
                 fecha = input("Ingrese el Dia de hoy separando el dia y el mes con un espacio de barra: ")
                 if len(str(fecha)) != 5:
@@ -257,7 +274,7 @@ class Function:
             except ValueError:
                 print("En latitud, longitud y cantidad de participantes ingrese valores numericos")
             except e.FechaError:
-                print("No esta colocando correctamente la fecha, recuerde el espacios")
+                print("No está colocando correctamente la fecha, recuerde el espacios")
         Sensor.ReportarAdministracion(x, y, nombre, tipo, cantidadPersonas, fecha)
         AdministracionSensores.ReportarEventoAAdmin()
         mi = Mapa()
@@ -272,7 +289,7 @@ class Function:
             try:
                 contrasena = input("Ingrese la contraseña de Administrador: ")
                 if contrasena == "contrasena":
-                    print("Creaste un Admin!")
+                    # print("Has creado un Admin!")
                     return -1  # llamo a AdminChoices(admin)
                 elif contrasena != "contrasena":
                     raise e.NonAdminError()
@@ -280,14 +297,14 @@ class Function:
             except Exception:
                 print("Si sos admin, ingrese correctamente su clave.")
                 counter += 1
-        print("Tu usuario no corresponde al de un administrados")
+        print("Tu usuario no corresponde al de un administrador")
         print("...Volviendo al inicio...")
         return self.Choice()
 
     def AdminChoices(self, admin):
         while True:
             try:
-                accion = int(input("Si esta registrado presione 1, si quiere registrarse presione 2: "))
+                accion = int(input("Ingrese: \n\t|1 Si ya está registrado \n\t|2 Si quiere registrarse \n\t¿Qué desea hacer?:"))
                 break
             except ValueError:
                 print("Ingrese el numero solicitado")
@@ -295,8 +312,5 @@ class Function:
 
 
 functions = Function()
-
 prueba = Function()
 prueba.CitizenLoop()
-
-
