@@ -114,8 +114,7 @@ class Efimero:
             paquete = [solicitud1, ciudadano_r]
             return paquete
         else:
-            raise DatosIncorrectos(
-                "Un cuil tiene 11 numeros, y un telefono 10, por favor verifique los datos ingresados")
+            raise DatosIncorrectos()
 
     def rechazar(self, solicitud):
         contacto = solicitud.contacto
