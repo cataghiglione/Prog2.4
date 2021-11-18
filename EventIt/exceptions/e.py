@@ -17,7 +17,15 @@ class NoExiste(Exception):
 
 
 class DatosIncorrectos(Exception):
-    pass
+    @classmethod
+    def getMsg(cls, msg):
+        return msg
+
+
+class SolicitudNoEncontrada(Exception):
+    @classmethod
+    def getMsg(cls):
+        return 'La solicitud no fue encontrada, escriba el nombre nuevamente.'
 
 
 class ErrorCuil(Exception):
